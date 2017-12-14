@@ -1,9 +1,6 @@
-#########################################################################
-#																		#
-#		FIAP - POS														#
-#		BY: LUIZ FERNANDO												#
-#																		#
-#########################################################################
 
+
+	FIAP - POS GRADUACAO
+	BY: LUIZ FERNANDO	
 
  - WORKSPACE COM TODOS OS EXERCICIOS E TRABALHOS REALIZADOS DURANTE A PÓS GRADUACAO
