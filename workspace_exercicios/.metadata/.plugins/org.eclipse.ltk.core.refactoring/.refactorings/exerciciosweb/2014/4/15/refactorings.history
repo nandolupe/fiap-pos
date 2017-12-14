@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;FuncionarioDAOTest.java&apos; to &apos;exerciciosweb/src/com.exercicios.test&apos;&#x0D;&#x0A;- Original project: &apos;exerciciosweb&apos;&#x0D;&#x0A;- Destination element: &apos;exerciciosweb/src/com.exercicios.test&apos;&#x0D;&#x0A;- Original element: &apos;com.exercicios.business.FuncionarioDAOTest.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;com.exercicios.test" element1="/src&lt;com.exercicios.business{FuncionarioDAOTest.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1397066200307" units="1" version="1.0"/>
+</session>

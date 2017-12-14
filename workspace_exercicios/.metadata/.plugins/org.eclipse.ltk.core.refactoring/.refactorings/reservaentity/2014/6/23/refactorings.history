@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;reservaweb/src/br.com.fiap.reservaweb.entity&apos;&#x0D;&#x0A;- Original project: &apos;reservaentity&apos;&#x0D;&#x0A;- Destination element: &apos;reservaweb/src/br.com.fiap.reservaweb.entity&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     reservaentity.Reserva.java&#x0D;&#x0A;     reservaentity.Estabelecimento.java" description="Copy compilation units" destination="=reservaweb/src&lt;br.com.fiap.reservaweb.entity" element1="/src&lt;reservaentity{Reserva.java" element2="/src&lt;reservaentity{Estabelecimento.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1401742514026" units="2" version="1.0"/>
+</session>

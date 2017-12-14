@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="br.com.fiap.projetohibernate.datatypes.PedidoItem" table="PEDIDO_ITEM" catalog="ecommerce">
+		<id name="idTipoItem" type="int">
+			<column name="ID_TIPO_ITEM" />
+			<generator class="assigned" />
+		</id>
+		<property name="dscTipoItem" type="string">
+			<column name="DSC_TIPO_ITEM" length="100" />
+		</property>
+		<many-to-one name="item" column="ID_ITEM" class="Item" not-null="true" />
+		<many-to-one name="pedido" column="ID_PEDIDO" class="Pedido" not-null="true" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+package br.com.fiap.java.servico;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import br.com.fiap.java.io.MensagemArquivo;
+import br.com.fiap.mensagemjava.exception.NegocioException;
+
+public class ServicoMensagem {
+	Logger logger = Logger.getLogger(this.getClass().getName());
+
+	public void codificar(String mensagem) {
+		logger.setLevel(Level.ALL);
+		logger.log(Level.INFO, "Método codificar()");
+
+		try {
+			
+			MensagemArquivo.getInstance().escreverAtividades(mensagem);
+			
+		} catch (NegocioException e) {
+			e.printStackTrace();
+		}
+	}
+}

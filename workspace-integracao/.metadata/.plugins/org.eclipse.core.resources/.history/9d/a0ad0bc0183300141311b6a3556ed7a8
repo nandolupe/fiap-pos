@@ -1,0 +1,74 @@
+package com.fiap.contamedica.gateway;
+
+import javax.jms.JMSException;
+import javax.jms.Queue;
+import javax.jms.QueueConnection;
+import javax.jms.QueueConnectionFactory;
+import javax.jms.QueueRequestor;
+import javax.jms.QueueSender;
+import javax.jms.QueueSession;
+import javax.jms.Session;
+import javax.jms.TextMessage;
+import javax.naming.Context;
+import javax.naming.NamingException;
+
+/**
+ * Classe responsável em ser a integradora com a Queue. Cabe a ela enviar e
+ * devolver a informação padrão de comunicação da queue no caso XML está sendo
+ * utilizado para troca de comunicação..
+ * 
+ * @author Luiz Fernando
+ * 
+ */
+public class ContaMedicaProdutorGateway extends QueueBase {
+
+	public ContaMedicaProdutorGateway() {
+	}
+
+	private static final String NOME_FILA = "queue/FilaFIAP";
+	
+	Context jndiContext;
+	QueueConnectionFactory queueConnectionFactory;
+	QueueConnection queueConnection;
+	QueueSession queueSession;
+	Queue queue;
+	QueueSender queueSender;
+	TextMessage message;
+
+	public String enviarXml(String xmlIn) {
+		
+		String xmlRetorno = "";
+		
+		try {
+			jndiContext = getInitial();
+				queueConnectionFactory = (QueueConnectionFactory)
+					jndiContext.lookup("ConnectionFactory");
+			System.out.println("*** Obtendo Queue");
+			queue = (Queue) jndiContext.lookup(NOME_FILA);
+			queueConnection =
+					queueConnectionFactory.createQueueConnection();
+			System.out.println("*** Criando conexão com Queue...");
+			queueSession =
+					queueConnection.createQueueSession(false,
+							Session.AUTO_ACKNOWLEDGE);
+			System.out.println("*** Criando o Sender...");
+			QueueRequestor queueRequestor = new QueueRequestor(queueSession, queue);
+			System.out.println("*** Iniciando a conexão...");
+			queueConnection.start();
+			System.out.println("*** Criando Mensagem Text..");
+			message = queueSession.createTextMessage();
+			message.setText(xmlIn);
+			System.out.println("*** Enviando mensagem...");
+			TextMessage reply = (TextMessage) queueRequestor.request(message);
+			xmlRetorno = reply.getText();
+		} catch (JMSException e) {
+			System.out.println("Exception : " +
+					e.toString());
+		} finally {
+			fecharConexao(queueConnection);
+		}
+		
+		return xmlRetorno;
+	}
+
+}

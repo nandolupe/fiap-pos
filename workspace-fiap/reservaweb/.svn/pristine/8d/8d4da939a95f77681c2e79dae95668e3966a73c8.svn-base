@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+
+<h:head>
+	<title>Reservas</title>
+	<link href="../bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />
+	<link href="../bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+	<script src="../bootstrap/js/bootstrap.js"></script>
+	<style type="text/css">
+	body {
+		padding-top: 60px;
+		padding-bottom: 40px;
+	}
+	</style>
+</h:head>
+
+<f:view>
+	<h:body>
+		<h:form styleClass="form-signin" >
+			<div class="navbar navbar-inverse navbar-fixed-top">
+				<div class="navbar-inner">
+					<div class="container">
+						<a class="btn btn-navbar" data-toggle="collapse"
+							data-target=".nav-collapse"> <span class="icon-bar"></span> 
+							<span class="icon-bar"></span> <span class="icon-bar"></span>
+						</a> 
+						<a class="brand" href="#">Reservas</a>
+						<div class="nav-collapse collapse">
+							<p class="navbar-text pull-right">
+				              Olá <h:outputText value="#{loginBean.estabelecimento.nome}" />  
+				            </p>
+							<ul class="nav">
+								<li class="active"><a href="#">Home</a></li>
+								<li><h:commandLink action="#{cadastroReservas.cadastrarReservas}" value="Reservas" /></li>
+								<li><h:commandLink action="#{cadastroEstabelecimento.perfil}" value="Perfil" /></li>
+							</ul>
+						</div>
+						<!--/.nav-collapse -->
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<a4j:region>
+					<rich:panel header="Reservas" id="painel">
+						<br />
+						<span style="width: 200px;" >Nome Cliente:</span><h:inputText value="#{cadastroReservas.reserva.nomeCliente}" required="true" style="width: 300px;" id="nomeCliente" requiredMessage="Nome Cliente é Obrigatório!" /><h:message for="nomeCliente" /><br />
+						<span style="width: 200px;">Contato:</span><h:inputText value="#{cadastroReservas.reserva.contato}" required="true" id="contato" requiredMessage="Contato é Obrigatório!" /><h:message for="contato" /><br />
+						<span style="width: 200px;" >Mesa:</span><h:inputText value="#{cadastroReservas.reserva.codMesa}" required="true" id="mesa" requiredMessage="Mesa é Obrigatória!" /><h:message for="mesa" /><br />
+						<span style="width: 200px;">Data/Hora:</span><rich:calendar value="#{cadastroReservas.reserva.dtReserva}" datePattern="dd/MM/yyyy HH:mm"></rich:calendar><h:message for="dataReserva" /><br />
+						
+						<a4j:commandButton value="Salvar" action="#{cadastroReservas.salvarReserva}" render="tabela" />
+						<a4j:commandButton value="Pesquisar" action="#{cadastroReservas.listaReservas}" render="tabela" />
+						<br /><br />
+						<rich:dataTable id="tabela" var="us" value="#{cadastroReservas.listaReservas}" style="width:100%;">
+							<rich:column>
+								<f:facet name="header">Nome Cliente</f:facet>
+								<h:outputText value="#{us.nomeCliente}" />
+							</rich:column>
+							<rich:column>
+								<f:facet name="header">Contato</f:facet>
+								<h:outputText value="#{us.contato}" />
+							</rich:column>
+							<rich:column>
+								<f:facet name="header">Mesa</f:facet>
+								<h:outputText value="#{us.codMesa}" />
+							</rich:column>
+							<rich:column>
+							<f:facet name="header">Data/Hora</f:facet>
+							<h:outputText value="#{us.dtReserva}">
+								<f:convertDateTime pattern="dd/MM/yyyy HH:mm" />
+							</h:outputText>
+						</rich:column>
+						</rich:dataTable>
+					</rich:panel>
+				</a4j:region>
+				<footer>
+					<p>FIAP 2014</p>
+				</footer>
+			</div>
+		</h:form>
+	</h:body>
+</f:view>
+</html>

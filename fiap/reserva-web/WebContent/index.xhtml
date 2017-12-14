@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Login</title>
+</h:head>
+
+<f:view>
+	<h:body>
+		<h:form>
+			<p:panel id="basic" header="Login" style="margin-bottom:20px">
+		        <h:panelGrid columns="2" cellpadding="10">
+		            <table id="tab" style="width: 100%;">
+						<tr>
+							<td>Login:</td>
+							<td><h:inputText value="#{clienteMB.cliente.login}" /></td>
+						</tr>
+						<tr>
+							<td>Senha:</td>
+							<td><h:inputSecret value="#{clienteMB.cliente.senha}" /></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<p:commandButton value="Login" action="#{clienteMB.logar}" />
+							</td>
+						</tr>
+					</table> 
+				</h:panelGrid>
+		    </p:panel>
+		</h:form>
+	</h:body>
+</f:view>
+</html>

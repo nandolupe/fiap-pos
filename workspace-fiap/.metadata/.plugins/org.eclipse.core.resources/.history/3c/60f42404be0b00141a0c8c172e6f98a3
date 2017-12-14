@@ -1,0 +1,27 @@
+package br.com.fiap.java.io;
+
+/**
+ * Import do arquivos externos utilizados na classe
+ */
+import java.io.File;
+
+import br.com.fiap.mensagemjava.exception.NegocioException;
+
+/**
+ * @author Turma Fiap 23SCJ
+ */
+public interface IArquivo {
+	/**
+	 * Método salvarArquivo
+	 * @param file
+	 * @param linha
+	 */
+	void salvarArquivo(File file, String linha) throws NegocioException;
+
+	/**
+	 * Método lerArquivo
+	 * @param file
+	 * @return Texto
+	 */
+	String lerArquivo(File file)throws NegocioException;
+}

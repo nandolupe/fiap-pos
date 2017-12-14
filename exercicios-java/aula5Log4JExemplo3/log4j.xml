@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+	<param name="Target" value="System.out"></param>
+	<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="[%d{ISO8601}][%M] %-5p %c %m %n"></param>
+	</layout>
+</appender>
+
+<appender name="FILE" class="org.apache.log4j.RollingFileAppender">
+	<param name="File" value="logs/calculafatorial.log"/> 
+	<param name="MaxFileSize" value="5KB"/>
+	<param name="MaxBackupIndex" value="5"/>
+	<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="[%d{ISO8601}][%M] %-5p %c %m %n"></param>
+	</layout>
+	<filter class="org.apache.log4j.varia.LevelRangeFilter">
+		<param name="LevelMin" value="DEBUG" />
+		<param name="LevelMax" value="FATAL" />
+	</filter>
+</appender>
+
+<appender name="FILE_ERR" class="org.apache.log4j.RollingFileAppender">
+	<param name="File" value="logs/calculafatorial_err.log"/> 
+	<param name="MaxFileSize" value="5KB"/>
+	<param name="MaxBackupIndex" value="5"/>
+	<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="[%d{ISO8601}][%M] %-5p %c %m %n"></param>
+	</layout>
+	<filter class="org.apache.log4j.varia.LevelRangeFilter">
+		<param name="LevelMin" value="WARN" />
+		<param name="LevelMax" value="FATAL" />
+	</filter>
+</appender>
+
+<appender name="MAIL" class="org.apache.log4j.net.SMTPAppender">
+	<param name="BufferSize" value="512" />
+	<param name="From" value="log4j.calculaFatorial" />
+	<param name="SMTPHost" value="smtp.synapsystem.com.br" />
+	<param name="Subject" value="[Log4J] CalculaFatorial" />
+	<param name="To" value="marcos@synapsystem.com.br" />
+	<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="[%d{ISO8601}][%-5p] %c %m %n"></param>
+	</layout>
+	<filter class="org.apache.log4j.varia.LevelRangeFilter">
+		<param name="LevelMin" value="ERROR" />
+		<param name="LevelMax" value="FATAL" />
+	</filter>
+</appender>
+
+<appender name="DATABASE" class="org.apache.log4j.jdbc.JDBCAppender">   
+    <param name="Threshold" value="ERROR" />   
+    <param name="driver" value="com.mysql.jdbc.Driver" />   
+    <param name="URL" value="jdbc:mysql://localhost:3306/monitor" />   
+    <param name="user" value="root" />   
+    <param name="password" value="fiap"/>   
+    <layout class="org.apache.log4j.PatternLayout">   
+        <param name="ConversionPattern" value="INSERT INTO log (descricao) VALUES ('%m')" />   
+    </layout>
+    <!--<filter class="org.apache.log4j.varia.LevelRangeFilter">
+		<param name="LevelMin" value="DEBUG" />
+		<param name="LevelMax" value="FATAL" />
+	</filter>-->
+</appender>
+
+	
+<root>
+	<appender-ref ref="STDOUT"></appender-ref>
+	<appender-ref ref="FILE"></appender-ref>
+	<appender-ref ref="FILE_ERR"></appender-ref>
+	<!-- <appender-ref ref="MAIL"></appender-ref>
+	<appender-ref ref="DATABASE"></appender-ref> -->
+</root>
+</log4j:configuration>

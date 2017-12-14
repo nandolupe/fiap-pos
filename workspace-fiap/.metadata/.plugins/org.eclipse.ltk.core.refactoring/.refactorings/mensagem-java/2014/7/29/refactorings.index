@@ -1,0 +1,22 @@
+1405385548813	Delete element
+1405385557150	Rename type 'ServicoAtividade'
+1405385642632	Delete element
+1405385785212	Delete element
+1405386549086	Rename method 'telaSalvar'
+1405386844243	Rename type 'AtividadeView'
+1405386857317	Delete element
+1405387034479	Rename type 'AtividadeArquivo'
+1405387048841	Rename field 'CAMINHO_ARQUIVO_ATIVIDADES'
+1405387127483	Rename package 'br.com.fiap.java.exception'
+1405387133688	Rename package 'br.com.fiap.java.view'
+1405387138900	Rename package 'br.com.fiap.java.util'
+1405387142409	Rename package 'br.com.fiap.java.servico'
+1405387147008	Rename package 'br.com.fiap.java.io'
+1405387252866	Rename method 'criptografa'
+1405387265257	Rename method 'decriptografa'
+1405387422303	Rename method 'escreverAtividades'
+1405387439890	Rename method 'decodificarMensagem'
+1405387976973	Rename local variable 'nomeDigitado'
+1405388107142	Rename local variable 'mensagemCodificada'
+1405391896513	Rename local variable 'nomeDigitado'
+1405478436250	Delete element

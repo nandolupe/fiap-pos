@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Built-By: PC-CASA
+Build-Jdk: 1.7.0_67
+Specification-Title: Struts Core
+Specification-Version: 1.3.10
+Specification-Vendor: Apache Software Foundation
+Implementation-Title: Struts Core
+Implementation-Version: 1.3.10
+Implementation-Vendor-Id: org.apache.struts
+Implementation-Vendor: Apache Software Foundation
+Created-By: Maven Integration for Eclipse
+

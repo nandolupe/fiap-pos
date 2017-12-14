@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+
+<h:head>
+	<title>Atualiza Perfil</title>
+	<link href="#{request.contextPath}//bootstrap/css/bootstrap.css"
+		rel="stylesheet" media="screen" />
+	<link
+		href="#{request.contextPath}//bootstrap/css/bootstrap-responsive.css"
+		rel="stylesheet" />
+	<script src="#{request.contextPath}//bootstrap/js/bootstrap.js"></script>
+	<style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+</h:head>
+
+<f:view>
+	<h:body>
+		<h:form styleClass="form-signin" id="formHeader">
+			<div class="navbar navbar-inverse navbar-fixed-top">
+				<div class="navbar-inner">
+					<div class="container">
+						<a class="btn btn-navbar" data-toggle="collapse"
+							data-target=".nav-collapse"> <span class="icon-bar"></span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span>
+						</a> <a class="brand" href="#">Reservas de Mesa</a>
+						<div class="nav-collapse collapse">
+							<p class="navbar-text pull-right">
+								Olá
+								<h:outputText value="#{loginBean.estabelecimento.nome}" />  
+								<h:commandLink action="#{loginBean.logout}" value="Logout" />
+							</p>
+							<ul class="nav">
+								<li><h:commandLink action="#{loginBean.homePage}"
+										value="Home" /></li>
+								<li><h:commandLink
+										action="#{cadastroReservas.cadastrarReservas}"
+										value="Reservas" /></li>
+								<li class="active"><h:commandLink
+										action="#{cadastroEstabelecimento.perfil}" value="Perfil" /></li>
+							</ul>
+						</div>
+						<!--/.nav-collapse -->
+					</div>
+				</div>
+			</div>
+		</h:form>
+		<div class="container">
+			<a4j:region>
+				<rich:panel header="Perfil" id="painel">
+					<h:form id="atualizaPerfil">
+						<label style="width: 300px;">CNPJ / CPF:</label>
+						<h:inputText disabled="true"
+							value="#{cadastroEstabelecimento.estabelecimento.cnpjCpf}"
+							required="true" id="cnpjCpf"
+							requiredMessage="CNPJ / CPF obrigatório!" />
+						<rich:message for="cnpjCpf" style="color:red" />
+
+						<label style="width: 300px;">Nome Estabelecimento:</label>
+						<h:inputText
+							value="#{cadastroEstabelecimento.estabelecimento.nome}"
+							required="true" id="nomeEstabelecimento"
+							requiredMessage="Estabelecimento obrigatório!" />
+						<rich:message for="nomeEstabelecimento" />
+
+						<label style="width: 300px;">Razão Social:</label>
+						<h:inputText
+							value="#{cadastroEstabelecimento.estabelecimento.razaoSocial}"
+							required="true" id="razaoSocial"
+							requiredMessage="Razão social obrigatório!" />
+						<rich:message for="razaoSocial" style="color:red" />
+
+						<label style="width: 300px;">E-mail:</label>
+						<h:inputText
+							value="#{cadastroEstabelecimento.estabelecimento.email}"
+							required="true" id="email" requiredMessage="Email obrigatório!" />
+						<rich:message for="email" style="color:red" />
+
+
+						<label style="width: 300px;">Login:</label>
+						<h:inputText
+							value="#{cadastroEstabelecimento.estabelecimento.login}"
+							required="true" id="login" requiredMessage="Login obrigatório!" />
+						<rich:message for="login" style="color:red" />
+
+
+						<label style="width: 300px;">Senha:</label>
+						<h:inputSecret binding="#{cadastroEstabelecimento.senhaInput}"
+							value="#{cadastroEstabelecimento.estabelecimento.senha}"
+							required="true" id="senha" requiredMessage="Senha obrigatória!" />
+						<rich:message for="senha" style="color:red" />
+
+						<label style="width: 300px;">Confirmar Senha:</label>
+						<h:inputSecret value="#{cadastroEstabelecimento.confirmaSenha}"
+							id="senhaConfirmacao"
+							validator="#{cadastroEstabelecimento.verificaSenha}"
+							validatorMessage="Digite as senhas iguais" />
+						<rich:message for="senhaConfirmacao" style="color:red" />
+
+						<br />
+
+						<a4j:commandButton value="Salvar"
+							action="#{cadastroEstabelecimento.atualizarPerfil}"
+							style="margin-right: 10px;" />
+					</h:form>
+				</rich:panel>
+			</a4j:region>
+			<footer>
+				<p>FIAP 2014</p>
+			</footer>
+		</div>
+	</h:body>
+</f:view>
+</html>

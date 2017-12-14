@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="br.com.fiap.projetohibernate.datatypes.Cliente" table="CLIENTE" catalog="ecommerce">
+		<id name="idCliente" type="int">
+			<column name="ID_CLIENTE" />
+			<generator class="assigned" />
+		</id>
+		<property name="contato" type="String">
+			<column name="CONTATO" />
+		</property>
+		<property name="cpf" type="String">
+			<column name="CPF" />
+		</property>
+		<property name="dtNasc" type="date">
+			<column name="DT_NASC" />
+		</property>
+		<property name="endereco" type="String">
+			<column name="ENDERECO" />
+		</property>
+		<property name="login" type="String">
+			<column name="LOGIN" />
+		</property>
+		<property name="nomeCliente" type="String">
+			<column name="NOME_CLIENTE" />
+		</property>
+		<property name="senha" type="String">
+			<column name="SENHA" />
+		</property>
+		<property name="sexo" type="String">
+			<column name="SEXO" />
+		</property>
+		
+		<set name="pedidos" cascade="all">
+			<key column="ID_CLIENTE" />
+			<one-to-many class="Pedido" />
+      	</set>
+	</class>
+</hibernate-mapping>

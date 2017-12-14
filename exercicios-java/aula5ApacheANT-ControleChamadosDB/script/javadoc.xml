@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- 
+Script para geração do javadoc.
+-->
+
+<project name="controleChamados-javadoc" default="generate.javadoc" basedir=".">
+
+   <!-- Arquivo com as propriedades básicas do script -->
+   <property file="script.properties"/>
+
+   <!-- Diretório base do script -->
+   <property name="base" value=".." />
+
+  	<target name="generate.javadoc" depends="clean">
+		<mkdir dir="${javadoc.dir}" />
+		<antcall target="javadoc"/>
+	</target>
+
+	<target name="clean">
+		<delete failonerror="false" includeEmptyDirs="true">
+			<fileset dir="${javadoc.dir}" />
+		</delete>
+	</target>
+
+   <target name="javadoc">
+      <javadoc 
+         packagenames="br.com.fiap.*"
+         destdir="${javadoc.dir}" 
+         author="true" 
+         version="true" 
+         use="true"
+         windowtitle="ChamadoBD"
+         doctitle="ChamadoBD"
+         bottom="&lt;i&gt;Copyright &#169; 2014 FIAP. All Rights Reserved.&lt;/i&gt;">
+         <!--<classpath>
+         	<fileset dir="../lib">
+         		<include name="*.jar"/>
+         	</fileset>
+         </classpath>-->
+		 <sourcepath>
+			<pathelement location="../src"/>
+		</sourcepath>
+      </javadoc>
+   </target>
+</project>

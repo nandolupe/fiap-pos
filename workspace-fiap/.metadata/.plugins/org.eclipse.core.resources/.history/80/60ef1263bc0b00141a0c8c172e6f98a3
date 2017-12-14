@@ -1,0 +1,129 @@
+package br.com.fiap.java.view;
+
+/**
+ * Import do arquivos externos utilizados na classe
+ */
+import java.util.Date;
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+import br.com.fiap.java.bean.Atividade;
+import br.com.fiap.java.servico.ServicoAtividade;
+import br.com.fiap.java.servico.ServicoMensagem;
+import br.com.fiap.java.util.Util;
+
+/**
+ * @author Turma Fiap 23SCJ
+ */
+public class AtividadeView {
+	/**
+	 * Atributo - ServicoAtividade
+	 */
+	ServicoMensagem servicoMensagem = new ServicoMensagem();
+	/**
+	 * Atributo do tipo AtividadeView
+	 */
+	public static AtividadeView singleton;
+
+	/**
+	 * Construtor private
+	 */
+	private AtividadeView() {
+		super();
+	}
+
+	/**
+	 * Método getInstance
+	 * @return uma instância da classe
+	 */
+	public static AtividadeView getInstance() {
+		if (singleton == null) {
+			singleton = new AtividadeView();
+		}
+		return singleton;
+	}
+
+	/**
+	 * Método telaInicial
+	 */
+	public void telaInicial() {
+		int valor;
+		try {
+			valor = Util.converteInt("Digite 1 para (Salvar Atividades) \n"
+					+ "Digite 2 para (Listar os Atividadess) \n" + "Digite 3 para (Voltar tela pricipal)");
+			if (valor > 3 || valor < 1) {
+				JOptionPane.showMessageDialog(null, "Digite 1, 2 ou 3");
+				telaInicial();
+			}
+			switch (valor) {
+			case 1:
+				telaSalvar();
+				break;
+			case 2:
+				telaListar();
+				break;
+			case 3:
+				PrincipalView.getInstance().telaInicial();
+				break;
+			}
+		} catch (Exception e) {
+			telaInicial();
+		}
+	}
+
+	/**
+	 * Método telaSalvar
+	 */
+	public void telaSalvar() {
+		Atividade atividade = new Atividade();
+		Date inicialDigitado = Util.converteData("Digite a data inicial no fomato dd/mm/aaaa");	
+		Date finalDigitado = new Date(0);
+		while(inicialDigitado.getTime() > finalDigitado.getTime()){
+			finalDigitado = Util.converteData("Digite a data final no fomato dd/mm/aaaa");
+		}		 
+		String nomeDigitado = JOptionPane.showInputDialog("Digite o nome para do evento");
+		String localDigitado = JOptionPane.showInputDialog("Digite o local do evento");
+		atividade.setDataInicio(inicialDigitado);
+		atividade.setDataFim(finalDigitado);
+		atividade.setNome(nomeDigitado);
+		atividade.setLocal(localDigitado);
+		servicoAtividade.salvar(atividade);
+		telaInicial();
+	}
+
+	/**
+	 * Método telaListar
+	 */
+	public void telaListar() {
+		List<Atividade> lista = servicoAtividade.listar();
+		imprime(lista);
+	}
+
+	/**
+	 * Método imprime
+	 * @param lista
+	 */
+	private void imprime(List<Atividade> lista) {
+		StringBuilder sb = new StringBuilder("***********************************************");
+		sb.append("\n");
+		for (Atividade atividade : lista) {
+			sb.append("Data Inicio: ");
+			sb.append(Util.dataParaArquivo(atividade.getDataInicio()));
+			sb.append("\n");
+			sb.append(" Data Fim: ");
+			sb.append(Util.dataParaArquivo(atividade.getDataFim()));
+			sb.append("\n");
+			sb.append(" Nome Evento: ");
+			sb.append(atividade.getNome());
+			sb.append("\n");
+			sb.append(" Local Evento: ");
+			sb.append(atividade.getLocal());
+			sb.append("\n");
+			sb.append("***********************************************");
+			sb.append("\n");
+		}
+		JOptionPane.showMessageDialog(null, sb.toString());
+		telaInicial();
+	}
+}

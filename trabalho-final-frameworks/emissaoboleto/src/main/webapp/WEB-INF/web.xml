@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Archetype Created Web Application</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>EmitirBoletoServlet</servlet-name>
+  	<display-name>EmitirBoletoServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.fiap.emissaoboleto.servlet.EmitirBoletoServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AdicionarBoletoServlet</servlet-name>
+  	<display-name>AdicionarBoletoServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.fiap.emissaoboleto.servlet.AdicionarBoletoServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>EmitirRelatorioCompletoServlet</display-name>
+  	<servlet-name>EmitirRelatorioCompletoServlet</servlet-name>
+  	<servlet-class>com.fiap.emissaoboleto.servlet.EmitirRelatorioCompletoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EmitirBoletoServlet</servlet-name>
+  	<url-pattern>/EmitirBoletoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AdicionarBoletoServlet</servlet-name>
+  	<url-pattern>/AdicionarBoletoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EmitirRelatorioCompletoServlet</servlet-name>
+  	<url-pattern>/EmitirRelatorioCompletoServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

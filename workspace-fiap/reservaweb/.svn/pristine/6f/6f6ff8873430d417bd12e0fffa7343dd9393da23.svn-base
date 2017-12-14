@@ -1,0 +1,43 @@
+<ui:composition template="/WEB-INF/template.xhtml" 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://richfaces.org/sandbox/bootstrap"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j" >
+	
+	<ui:define name="importar">
+		<link href="../bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />
+		<link href="../bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+		<script src="../bootstrap/js/bootstrap.js"></script>
+	</ui:define>
+	<ui:define name="content">
+		<div class="hero-unit">
+			<h3>Atualiza Perfi</h3>
+				
+				<b:input value="#{cadastroEstabelecimento.estabelecimento.cnpjCpf}" placeholder="CNPJ / CPF" required="true" id="cnpjcpf" requiredMessage="CNPJ / CPF obrigatório!" />
+				<h:message for="cnpjcpf" /><br />
+				
+				<b:input value="#{cadastroEstabelecimento.estabelecimento.nome}" placeholder="Nome Estabelecimento" required="true" id="nomeEstabelecimento" requiredMessage="Nome do estabelecimento obrigatório!" />
+				<h:message for="nomeEstabelecimento" /><br />
+				
+				<b:input value="#{cadastroEstabelecimento.estabelecimento.razaoSocial}" placeholder="Razão Social" required="true" id="razaoSocial" requiredMessage="Razão social obrigatório!" />
+				<h:message for="razaoSocial" /><br />
+				
+				<b:input value="#{cadastroEstabelecimento.estabelecimento.email}" placeholder="Email" required="true" id="email" requiredMessage="Email obrigatório!" />
+				<h:message for="email" /><br />
+				
+				<b:input value="#{cadastroEstabelecimento.estabelecimento.login}" placeholder="Login" required="true" id="login" requiredMessage="Login obrigatório!" />
+				<h:message for="login" /><br />
+				
+				<b:input value="#{cadastroEstabelecimento.estabelecimento.senha}" placeholder="Senha" type="password" required="true" id="senha" requiredMessage="Senha obrigatória!" />
+				<h:message for="senha" /><br />
+				
+				<b:input value="#{cadastroEstabelecimento.confirmaSenha}" placeholder="Confirmar Senha" type="password" id="senhaConfirmacao" validator="#{cadastroEstabelecimento.verificaSenha}" validatorMessage="Digite as senhas iguais" />
+				<h:message for="senhaConfirmacao" /><br />
+				
+				<b:commandButton value="Salvar" action="#{cadastroEstabelecimento.atualizar}" styleClass="btn btn-large btn-primary"  />
+		</div>
+	</ui:define>
+</ui:composition>

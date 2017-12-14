@@ -1,0 +1,13 @@
+package com.fiap.contamedica.gateway;
+
+/**
+ * @author Luiz Fernando 
+ *
+ */
+public abstract class QueueBase {
+
+	public QueueBase() {
+		
+	}
+
+}

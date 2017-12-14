@@ -1,0 +1,69 @@
+package com.fiap.artigorichfaces.bean;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+/**
+ * Classe responsável em ser o Managed Bean da tela de cadastro de clientes.
+ * 
+ * @author Luiz Fernando
+ *
+ */
+// Annotation responsável em identificar o nome do Managed Bean que o 
+// faces irá utilizar para administrar o cadastro de clientes
+@ManagedBean(name = "clienteMB")
+// @RequestScoped identifica que a vida útil desse Managed Bean será 
+// a nível de tempo de Session, ou seja, por sessão.
+@SessionScoped
+public class ClienteMB {
+	
+	// Construtor padrão
+	public ClienteMB() {
+		cliente = new Cliente();
+	}
+	
+	// Instância do objeto que servirá para salvar os dados do cliente
+	private Cliente cliente;
+	
+	// Lista de clientes, que servirá para listar todos os clientes salvos.
+	private List<Cliente> clienteList = new ArrayList<Cliente>();
+	
+	/**
+	 * Método responsável em simular a inclusão de um cliente, 
+	 * porém ele só atualiza a lista, dando a impressão de .
+	 */
+	public String salvarCliente() {
+		cliente.setIdCliente(new Random().nextInt());
+		clienteList.add(cliente);
+		return "/index";
+	}
+	
+	/**
+	 * Método responsável em remover um cliente da lista.
+	 */
+	public String removerCliente() {
+		clienteList.remove(cliente);
+		return "/index";
+	}
+	
+	// Getters and Setters
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+	
+	public List<Cliente> getClienteList() {
+		return clienteList;
+	}
+
+	public void setClienteList(List<Cliente> clienteList) {
+		this.clienteList = clienteList;
+	}
+}

@@ -1,0 +1,516 @@
+!SESSION 2014-08-29 22:26:28.409 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_67
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:16:30.312
+!MESSAGE Module contamedica published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-08-29 23:16:31.743
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-08-29 23:17:00.736
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:17:01.906
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:17:06.150
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-08-29 23:17:36.563
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-08-29 23:17:42.334
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-08-29 23:18:05.548
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:19:17.202
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:19:19.445
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:19:58.647
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:20:10.906
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:20:15.607
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:20:20.249
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:20:25.456
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:20:50.156
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:21:35.908
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:21:38.212
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:22:10.238
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:22:34.272
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:22:36.580
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:22:43.572
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-08-29 23:22:52.048
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-08-29 23:23:50.234
+!MESSAGE Server processes have been terminated.
+!SESSION 2014-09-01 17:21:52.647 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_67
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:20:52.376
+!MESSAGE Module contamedica published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-01 18:20:55.090
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-01 18:22:06.193
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:25:42.298
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:25:46.754
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:26:08.343
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:26:11.275
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:26:29.096
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:27:34.046
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:27:49.721
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:27:56.002
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:28:27.042
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:29:06.270
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:29:16.857
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:29:22.145
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:29:30.788
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:30:01.232
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:30:47.695
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:31:42.424
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:31:48.052
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:32:03.197
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:32:06.997
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:32:15.896
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:32:26.208
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:32:33.756
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:33:32.179
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:33:48.158
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:34:09.802
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:34:43.643
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:35:02.663
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:35:51.801
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:36:32.482
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:37:05.725
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:37:15.086
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:37:55.548
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:38:27.885
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 18:40:48.829
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-01 18:44:34.049
+!MESSAGE Server processes have been terminated.
+!SESSION 2014-09-01 19:22:51.393 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_67
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 19:45:07.967
+!MESSAGE 3 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-01 19:45:09.380
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-01 19:45:33.115
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-01 19:46:31.020
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-01 19:50:26.394
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-01 19:50:49.460
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 19:53:03.892
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:02:47.995
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:03:03.028
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:03:22.867
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:03:32.474
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:03:39.523
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:03:41.590
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:03:47.227
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:03:59.575
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:04:08.667
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:04:13.893
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:04:50.127
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:06:09.829
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:06:12.733
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:13:15.276
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:13:26.239
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:13:28.908
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:20:51.361
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:21:04.901
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:21:08.717
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:21:39.160
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-01 20:21:41.933
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-01 20:22:19.536
+!MESSAGE Server processes have been terminated.
+!SESSION 2014-09-03 23:46:05.825 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_67
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-03 23:49:08.079
+!MESSAGE Module contamedica published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-03 23:49:10.170
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-03 23:49:44.534
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-03 23:50:15.783
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-03 23:52:05.044
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-03 23:52:28.424
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-03 23:53:37.362
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-03 23:53:43.102
+!MESSAGE Module contamedica published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-03 23:53:45.957
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-03 23:54:10.021
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-03 23:58:56.653
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-03 23:59:30.120
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-04 00:01:56.442
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-04 00:02:20.575
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-04 00:03:23.473
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-04 00:03:46.366
+!MESSAGE Module contamedica published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-04 00:03:57.533
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-04 00:04:20.346
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2014-09-04 00:05:03.220
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-04 00:05:07.270
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-04 00:05:14.834
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-04 00:05:37.969
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-04 00:07:48.129
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-04 00:37:11.813
+!MESSAGE 3 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-04 00:37:12.896
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-04 00:37:43.391
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-04 00:37:52.269
+!MESSAGE Module contamedica published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-04 00:40:58.542
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-04 00:42:24.878
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-04 00:43:12.014
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-04 00:43:37.008
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-04 00:43:44.633
+!MESSAGE Module contamedica published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-04 00:47:26.525
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-04 00:47:31.886
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-04 00:48:32.974
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-04 00:51:05.733
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-04 00:51:11.056
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-04 00:51:23.905
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-04 00:52:11.333
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-04 00:52:45.493
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-04 00:52:57.368
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-04 00:52:58.525
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-04 00:53:45.194
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-04 00:55:34.106
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-04 00:57:02.106
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-04 00:57:18.603
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-04 00:57:28.692
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-04 00:57:50.642
+!MESSAGE Module contamedica published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-04 00:58:28.707
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-04 01:00:23.958
+!MESSAGE Server processes have been terminated.
+!SESSION 2014-09-04 21:19:58.012 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_67
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-05 00:27:37.098
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-05 00:27:38.562
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-05 00:28:03.319
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-05 00:29:50.817
+!MESSAGE Module contamedica published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-05 00:36:14.933
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-05 00:38:41.928
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-05 00:39:05.278
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-05 00:44:11.065
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-05 00:44:18.552
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-05 00:44:41.839
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-05 00:51:06.589
+!MESSAGE Server processes have been terminated.
+!SESSION 2014-09-06 18:58:06.446 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_67
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-06 19:17:47.329
+!MESSAGE Module contamedica published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-09-06 19:17:49.263
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-09-06 19:18:39.572
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-06 19:22:13.948
+!MESSAGE 1 files modified in module contamedica
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-09-06 19:22:19.720
+!MESSAGE Module contamedica published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-09-06 21:11:48.164
+!MESSAGE Server processes have been terminated.

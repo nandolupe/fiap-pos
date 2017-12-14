@@ -1,0 +1,8 @@
+INDEX VERSION 1.3+C:\ambiente-de-trabalho\workspace-artigo-web\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3241637327.index
+751500061.index
+3988163763.index
+1564399129.index
+2557260335.index
+2000757506.index
+3274173661.index

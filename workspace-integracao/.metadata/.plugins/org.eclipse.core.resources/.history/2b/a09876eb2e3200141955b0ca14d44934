@@ -1,0 +1,112 @@
+package com.fiap.contamedica.business;
+
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.util.logging.Logger;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
+import javax.xml.transform.stream.StreamSource;
+
+import com.fiap.contamedica.entity.AnaliseConta;
+import com.fiap.contamedica.entity.ContaMedica;
+import com.fiap.contamedica.gateway.ContaMedicaGateway;
+	
+/**
+ * Classe responsável em implementar as regras de negócio do módulo de conta médica.
+ * 
+ * @author Luiz Fernando
+ *
+ */
+public class ContaMedicaBusinessImpl {
+	
+	private final static Logger log = Logger.getLogger(ContaMedicaBusinessImpl.class.getName()); 
+	
+	private ContaMedicaGateway contaMedicaGateway = new ContaMedicaGateway();
+	
+	public ContaMedicaBusinessImpl() {}
+	
+	public void analisarConta(ContaMedica contaMedica) {
+		
+		String xmlEntrada = null;
+		String xmlSaida = null;
+		
+		// TODO PREPARAR PARSE DO CLIENTE
+		xmlEntrada = parseObjetcToXML(contaMedica);
+		
+		// TODO CONSUMIR QUEUE
+		xmlSaida = contaMedicaGateway.enviarXml(xmlEntrada);
+		
+		// TODO TRATAR RESPOSTA
+		ContaMedica contaMedicaResult = parseXMLtoObject(xmlSaida);
+		
+		// TODO RETORNAR PARA A SERVLET RESPOSTA
+		
+	}
+	
+	public static void main(String[] args) {
+		ContaMedicaBusinessImpl businessImpl = new ContaMedicaBusinessImpl();
+		businessImpl.parseObjetcToXML(new ContaMedica(1, "teste", "teste", 20.5, 30.5, "TESTE", "P"));
+	}
+	
+	/**
+	 * Método responsável em transformar um objeto {@link ContaMedica} em um xml.
+	 * 
+	 * @param contaMedica
+	 * @return
+	 */
+	public String parseObjetcToXML(ContaMedica contaMedica) {
+		
+		String xml = "";
+		
+		StringWriter stringWriter = new StringWriter();
+		
+		try {
+			
+			// CRIA UM CONTEXTO PARA O JAXB
+			JAXBContext jc = JAXBContext.newInstance(ContaMedica.class);
+			
+			// INSTANCIA DO OBJETO QUE IRÁ FAZER A CONVERSÃO
+			Marshaller m = jc.createMarshaller();
+			
+			// COLOCANDO A PROPRIEDADE PARA DEIXAR FORMATADO O XML
+			m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+			
+			// FAZENDO O PARSE PARA UM StringWriter
+			m.marshal(contaMedica, stringWriter);
+			
+			// PARSEANDO PARA UM STRING
+			xml = stringWriter.toString();
+			
+			log.info("Conta Medica XML: \n" + xml);
+			
+		} catch (JAXBException e) {
+			e.printStackTrace();
+		}
+		return xml;
+	}
+	
+	private AnaliseConta parseXMLtoObject(String xmlOut) {
+		
+		AnaliseConta analiseConta = null;
+		
+		try {
+			String xml = "<Employee><firstName>Yashwant</firstName><lastName>Chavan</lastName></Employee>";
+			JAXBContext jc = JAXBContext.newInstance(ContaMedica.class);
+			Unmarshaller unmarshaller = jc.createUnmarshaller();
+			StreamSource streamSource = new StreamSource(new StringReader(xml));
+			JAXBElement<AnaliseConta> je = unmarshaller.unmarshal(streamSource,
+					AnaliseConta.class);
+
+			analiseConta = (AnaliseConta) je.getValue();
+
+		} catch (JAXBException e) {
+			e.printStackTrace();
+		}
+		
+		return analiseConta;
+	}
+}

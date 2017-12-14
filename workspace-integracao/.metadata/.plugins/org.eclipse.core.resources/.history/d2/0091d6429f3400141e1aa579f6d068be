@@ -1,0 +1,7 @@
+package com.fiap.contamedica.util;
+
+public class PropertiesUtil {
+	static {
+		
+	}
+}

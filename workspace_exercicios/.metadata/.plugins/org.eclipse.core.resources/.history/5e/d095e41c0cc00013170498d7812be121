@@ -1,0 +1,10 @@
+package com.exercicios.persistence;
+
+import com.exercicios.datatypes.FuncionarioTO;
+
+public class FuncionarioDAOImpl {
+	public FuncionarioTO pesquisarFuncionarios(FuncionarioTO funcionarioTO) {
+
+
+	}
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://richfaces.org/sandbox/bootstrap">
+<head>
+
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />
+<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+<script src="bootstrap/js/bootstrap.js"></script>
+
+<style type="text/css">
+	body {
+	  padding-top: 40px;
+	  padding-bottom: 40px;
+	  background-color: #f5f5f5;
+	}
+	
+	.form-cad {
+	  max-width: 500px;
+	  padding: 19px 29px 29px;
+	  margin: 0 auto 20px;
+	  background-color: #fff;
+	  border: 1px solid #e5e5e5;
+	  -webkit-border-radius: 5px;
+	     -moz-border-radius: 5px;
+	          border-radius: 5px;
+	  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	}
+	.form-cad .form-cad-heading,
+	.form-cad .checkbox {
+	  margin-bottom: 10px;
+	}
+	.form-cad input[type="text"],
+	.form-cad input[type="password"] {
+	  font-size: 16px;
+	  height: auto;
+	  margin-bottom: 15px;
+	  padding: 7px 9px;
+	}
+</style>
+    
+<title>Cadastro</title>
+</head>
+<body>
+	<f:view>
+		<div class="container">
+			<h:form styleClass="form-cad" >
+				<h3>Cadastrar Estabelecimento</h3>
+				
+				<b:input value="#{cadastroEstabelecimento.estabelecimento.cnpjCpf}" placeholder="CNPJ / CPF" required="true" id="cnpjcpf" requiredMessage="CNPJ / CPF obrigatório!" />
+				<h:message for="cnpjcpf" /><br />
+				
+				<b:input value="#{cadastroEstabelecimento.estabelecimento.nome}" placeholder="Nome Estabelecimento" required="true" id="nomeEstabelecimento" requiredMessage="Nome do estabelecimento obrigatório!" />
+				<h:message for="nomeEstabelecimento" /><br />
+				
+				<b:input value="#{cadastroEstabelecimento.estabelecimento.razaoSocial}" placeholder="Razão Social" required="true" id="razaoSocial" requiredMessage="Razão social obrigatório!" />
+				<h:message for="razaoSocial" /><br />
+				
+				<b:input value="#{cadastroEstabelecimento.estabelecimento.email}" placeholder="Email" required="true" id="email" requiredMessage="Email obrigatório!" />
+				<h:message for="email" /><br />
+				
+				<b:input value="#{cadastroEstabelecimento.estabelecimento.login}" placeholder="Login" required="true" id="login" requiredMessage="Login obrigatório!" />
+				<h:message for="login" /><br />
+				
+				<b:input value="#{cadastroEstabelecimento.estabelecimento.senha}" placeholder="Senha" type="password" required="true" id="senha" requiredMessage="Senha obrigatória!" />
+				<h:message for="senha" /><br />
+				
+				<b:input value="#{cadastroEstabelecimento.confirmaSenha}" placeholder="Confirmar Senha" type="password" id="senhaConfirmacao" validator="#{cadastroEstabelecimento.verificaSenha}" validatorMessage="Digite as senhas iguais" />
+				<h:message for="senhaConfirmacao" /><br />
+				
+				<b:commandButton value="Salvar" action="#{cadastroEstabelecimento.salvar}" styleClass="btn btn-large btn-primary"  />
+			</h:form>
+		</div>
+	</f:view>
+</body>
+</html>

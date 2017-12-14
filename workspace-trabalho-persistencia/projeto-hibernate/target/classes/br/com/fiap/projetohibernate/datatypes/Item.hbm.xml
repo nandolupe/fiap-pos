@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="br.com.fiap.projetohibernate.datatypes.Item" table="ITEM" catalog="ecommerce">
+		<id name="idItem" type="int">
+			<column name="ID_ITEM" />
+			<generator class="assigned" />
+		</id>
+		<property name="dscItem" type="String">
+			<column name="DSC_ITEM" />
+		</property>
+		<property name="status" type="String">
+			<column name="STATUS" />
+		</property>
+		<property name="valorItem" type="big_decimal">
+			<column name="VALOR_ITEM" />
+		</property>
+		
+		<many-to-one name="tipoItem" column="ID_TIPO_ITEM" class="TipoItem" not-null="true" />
+		
+		<set name="pedidoItems" cascade="all">
+			<key column="ID_ITEM" />
+			<one-to-many class="PedidoItem" />
+      	</set>
+	</class>
+</hibernate-mapping>

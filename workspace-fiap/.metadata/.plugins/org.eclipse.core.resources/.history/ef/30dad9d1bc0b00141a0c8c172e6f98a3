@@ -1,0 +1,89 @@
+package br.com.fiap.java.view;
+
+/**
+ * Import do arquivos externos utilizados na classe
+ */
+import java.util.Date;
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+import br.com.fiap.java.bean.Atividade;
+import br.com.fiap.java.servico.ServicoAtividade;
+import br.com.fiap.java.servico.ServicoMensagem;
+import br.com.fiap.java.util.Util;
+
+/**
+ * @author Turma Fiap 23SCJ
+ */
+public class AtividadeView {
+	/**
+	 * Atributo - ServicoAtividade
+	 */
+	ServicoMensagem servicoMensagem = new ServicoMensagem();
+	/**
+	 * Atributo do tipo AtividadeView
+	 */
+	public static AtividadeView singleton;
+
+	/**
+	 * Construtor private
+	 */
+	private AtividadeView() {
+		super();
+	}
+
+	/**
+	 * Método getInstance
+	 * @return uma instância da classe
+	 */
+	public static AtividadeView getInstance() {
+		if (singleton == null) {
+			singleton = new AtividadeView();
+		}
+		return singleton;
+	}
+
+	/**
+	 * Método telaInicial
+	 */
+	public void telaInicial() {
+		int valor;
+		try {
+			valor = Util.converteInt("Digite 1 para (Codificar a Mensagem) \n"
+					+ "Digite 2 para (Decodificar a Mensagem) \n" + "Digite 3 para (Voltar tela pricipal)");
+			if (valor > 3 || valor < 1) {
+				JOptionPane.showMessageDialog(null, "Digite 1, 2 ou 3");
+				telaInicial();
+			}
+			switch (valor) {
+			case 1:
+				telaCodificar();
+				break;
+			case 3:
+				PrincipalView.getInstance().telaInicial();
+				break;
+			}
+		} catch (Exception e) {
+			telaInicial();
+		}
+	}
+
+	/**
+	 * Método telaSalvar
+	 */
+	public void telaCodificar() {
+		String nomeDigitado = JOptionPane.showInputDialog("Digite a mensagem a ser codificada: ");
+		servicoMensagem.codificar(nomeDigitado);
+		telaInicial();
+	}
+	
+	/**
+	 * Método telaSalvar
+	 */
+	public void telaCodificar() {
+		String nomeDigitado = JOptionPane.showInputDialog("Caminho do arquivo a ser decodificado: ");
+		servicoMensagem.codificar(nomeDigitado);
+		telaInicial();
+	}
+}

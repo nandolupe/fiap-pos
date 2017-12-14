@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+<head>
+
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />
+<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+<script src="bootstrap/js/bootstrap.js"></script>
+
+<style type="text/css">
+body {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #f5f5f5;
+}
+
+.form-signin {
+	max-width: 500px;
+	padding: 19px 29px 29px;
+	margin: 0 auto 20px;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+}
+
+.form-signin .form-signin-heading,.form-signin .checkbox {
+	margin-bottom: 10px;
+}
+
+.form-signin input[type="text"],.form-signin input[type="password"] {
+	font-size: 16px;
+	height: auto;
+	margin-bottom: 15px;
+	padding: 7px 9px;
+}
+</style>
+
+<title>Cadastro Estabelecimento</title>
+</head>
+<body>
+	<f:view>
+		<div class="container">
+			<h:form styleClass="form-signin">
+				<h2 class="form-signin-heading">Cadastrar</h2>
+				<br />
+
+				<label style="width: 300px;">CNPJ / CPF:</label>
+				<h:inputText
+					value="#{cadastroEstabelecimento.estabelecimento.cnpjCpf}"
+					required="true" id="cnpjCpf"
+					requiredMessage="CNPJ / CPF obrigatório!" maxlength="18" />
+				<rich:message for="cnpjCpf" style="color:red" />
+
+				<label style="width: 300px;">Nome Estabelecimento:</label>
+				<h:inputText value="#{cadastroEstabelecimento.estabelecimento.nome}"
+					required="true" id="nomeEstabelecimento"
+					requiredMessage="Estabelecimento obrigatório!" maxlength="30" />
+				<rich:message for="nomeEstabelecimento" style="color:red" />
+
+				<label style="width: 300px;">Razão Social:</label>
+				<h:inputText
+					value="#{cadastroEstabelecimento.estabelecimento.razaoSocial}"
+					required="true" id="razaoSocial"
+					requiredMessage="Razão social obrigatório!" maxlength="30" />
+				<rich:message for="razaoSocial" style="color:red" />
+
+				<label style="width: 300px;">E-mail:</label>
+				<h:inputText
+					value="#{cadastroEstabelecimento.estabelecimento.email}"
+					required="true" id="email" requiredMessage="Email obrigatório!" maxlength="30" />
+				<rich:message for="email" style="color:red" />
+
+
+				<label style="width: 300px;">Login:</label>
+				<h:inputText
+					value="#{cadastroEstabelecimento.estabelecimento.login}"
+					required="true" id="login" requiredMessage="Login obrigatório!" maxlength="30" />
+				<rich:message for="login" style="color:red" />
+
+
+				<label style="width: 300px;">Senha:</label>
+				<h:inputSecret binding="#{cadastroEstabelecimento.senhaInput}"
+					value="#{cadastroEstabelecimento.estabelecimento.senha}"
+					required="true" id="senha" requiredMessage="Senha obrigatória!" maxlength="10" />
+				<rich:message for="senha" style="color:red" />
+
+				<label style="width: 300px;">Confirmar Senha:</label>
+				<h:inputSecret value="#{cadastroEstabelecimento.confirmaSenha}"
+					id="senhaConfirmacao"
+					validator="#{cadastroEstabelecimento.verificaSenha}"
+					validatorMessage="Digite as senhas iguais" maxlength="10" />
+				<rich:message for="senhaConfirmacao" style="color:red" />
+
+				<br />
+				<h:commandButton value="Cadastrar"
+					action="#{cadastroEstabelecimento.salvar}"
+					styleClass="btn btn-large btn-primary" />
+			</h:form>
+		</div>
+	</f:view>
+</body>
+</html>

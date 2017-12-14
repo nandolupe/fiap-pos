@@ -1,0 +1,5 @@
+[2014-06-02 18:43:36,514][main] INFO  br.com.fiap.log.Operacoes Calculando fatorial de 12 
+[2014-06-02 18:43:36,517][calculaFatorial] DEBUG br.com.fiap.log.Operacoes Obtendo número 12 
+[2014-06-02 18:43:36,517][calculaFatorial] DEBUG br.com.fiap.log.Operacoes Executando cálculo 
+[2014-06-02 18:43:36,520][calculaFatorial] DEBUG br.com.fiap.log.Operacoes Calculo efetuado 
+[2014-06-02 18:43:36,520][calculaFatorial] DEBUG br.com.fiap.log.Operacoes Fatorial obtido: 479001600 

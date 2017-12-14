@@ -1,0 +1,64 @@
+package br.com.fiap.mensagemjava.view;
+
+import javax.swing.JOptionPane;
+
+import br.com.fiap.mensagemjava.servico.ServicoMensagem;
+import br.com.fiap.mensagemjava.util.Util;
+
+public class MensagemView {
+
+	ServicoMensagem servicoMensagem = new ServicoMensagem();
+
+	public static MensagemView singleton;
+
+	private MensagemView() {
+		super();
+	}
+
+	public static MensagemView getInstance() {
+		if (singleton == null) {
+			singleton = new MensagemView();
+		}
+		return singleton;
+	}
+
+	public void telaInicial() {
+		int valor;
+		try {
+			valor = Util.converteInt("Digite 1 para (Codificar a Mensagem) \n"
+					+ "Digite 2 para (Decodificar a Mensagem) \n" + "Digite 3 para (Sair)");
+			if (valor > 3 || valor < 1) {
+				JOptionPane.showMessageDialog(null, "Digite 1, 2 ou 3");
+				telaInicial();
+			}
+			switch (valor) {
+			case 1:
+				telaCodificar();
+				break;
+			case 2:
+				telaDecodificar();
+				break;
+			case 3:
+				System.exit(0);
+				break;
+			}
+		} catch (Exception e) {
+			telaInicial();
+		}
+	}
+
+	public void telaCodificar() {
+		String nomeDigitado = JOptionPane.showInputDialog("Digite a mensagem a ser codificada: ");
+		servicoMensagem.codificar(nomeDigitado);
+		telaInicial();
+	}
+	
+	public void telaDecodificar() {
+		String caminhoDigitado = JOptionPane.showInputDialog("Caminho do arquivo a ser decodificado: ");
+		String mensagemCodificada = servicoMensagem.decodificar(caminhoDigitado);
+		
+		JOptionPane.showMessageDialog(null, "Mensagem Decodificada: " + mensagemCodificada);
+		
+		telaInicial();
+	}
+}

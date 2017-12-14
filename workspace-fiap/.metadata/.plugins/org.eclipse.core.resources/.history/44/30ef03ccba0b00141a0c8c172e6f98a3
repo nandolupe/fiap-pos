@@ -1,0 +1,55 @@
+package br.com.fiap.java.io;
+
+/**
+ * Import do arquivos externos utilizados na classe
+ */
+import java.io.File;
+import java.util.logging.Level;
+
+import br.com.fiap.java.exception.NegocioException;
+
+/**
+ * @author Luiz Fernando
+ *
+ */
+public class AtividadeArquivo extends ArquivoGenerico {
+	/**
+	 * Constatante Caminho onde sera gravado informações da atividades
+	 */
+	private static final String CAMINHO_ARQUIVO_ATIVIDADES = "C:\\atividades.txt";
+	/**
+	 * Atributo do tipo AtividadeArquivo
+	 */
+	public static AtividadeArquivo singleton;
+
+	/**
+	 * Construtor private
+	 */
+	private AtividadeArquivo() {
+		super();
+	}
+
+	/**
+	 * Método getInstance
+	 * @return uma instância da classe
+	 */
+	public static AtividadeArquivo getInstance() {
+		if (singleton == null) {
+			singleton = new AtividadeArquivo();
+		}
+		return singleton;
+	}
+
+	/**
+	 * Método escreverAtividades
+	 * @param linha texto para persistir no arquivo
+	 * @throws NegocioException 
+	 */
+	public void escreverAtividades(String linha) throws NegocioException {
+		logger.setLevel(Level.ALL);
+		logger.log(Level.INFO, "Método escrever mensagem");
+		logger.log(Level.INFO, "Criando o file mensagem");
+		File file = new File(CAMINHO_ARQUIVO_ATIVIDADES);
+		salvarArquivo(file, linha);
+	}
+}

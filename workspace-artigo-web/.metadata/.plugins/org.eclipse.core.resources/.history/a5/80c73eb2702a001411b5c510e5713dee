@@ -1,0 +1,31 @@
+package com.fiap.artigostruts2.action;
+
+import org.apache.struts2.convention.annotation.Action;
+import org.apache.struts2.convention.annotation.Result;
+import org.apache.struts2.convention.annotation.Results;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+@Results({
+	   @Result(name="success", location="/index.jsp"),
+	   @Result(name="input", location="/index.jsp")
+	})
+public class CadastroRemoverCliente extends ActionSupport {
+	   private Cliente cliente;
+
+	   @Action(value="/removercliente")
+	   public String execute() {
+		   
+		   System.out.println(cliente);
+		   
+	       return SUCCESS;
+	   }
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+}

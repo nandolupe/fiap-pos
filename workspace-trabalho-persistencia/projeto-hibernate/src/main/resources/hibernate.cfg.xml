@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+	    <!-- Configurar o dialeto é dizer qual é a forma de comunicação do Hibernate e do banco de dados. -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		
+		<!-- Deve indicar que é o Driver Utilizado, cada SGDB tem o seu específico. -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		
+		<!-- URL de conexão -->
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ecommerce</property>
+		
+		<!-- Username do banco de dados. -->
+		<property name="hibernate.connection.username">root</property>
+		
+		<!-- Senha do banco de dados. -->
+		<property name="hibernate.connection.password">admin</property>
+		
+		<!-- A opção show_sql é para em tempo de execução o Hibernate realizar o log do SQL -->
+		<property name="hibernate.show_sql">true</property>
+		
+		<!-- A opção de current session, informamos que queremos como thread -->
+		<property name="hibernate.current_session_context_class">thread</property>
+		
+		<property  name = "hibernate.cache.provider_class" >
+	      org.hibernate.cache.EhCacheProvider
+		</property>
+		
+		<!-- Abaixo segue as configurações dos hbm para cada entidade que queremos configurar. -->
+		<mapping resource="br/com/fiap/projetohibernate/datatypes/TipoItem.hbm.xml" />
+		<mapping resource="br/com/fiap/projetohibernate/datatypes/Item.hbm.xml" />
+		<mapping resource="br/com/fiap/projetohibernate/datatypes/Cliente.hbm.xml" />
+		<mapping resource="br/com/fiap/projetohibernate/datatypes/Pedido.hbm.xml" />
+		<mapping resource="br/com/fiap/projetohibernate/datatypes/PedidoItem.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,56 @@
+package com.fiap.contamedica.gateway;
+
+import javax.jms.JMSException;
+import javax.jms.QueueConnection;
+import javax.jms.QueueRequestor;
+import javax.jms.QueueSession;
+import javax.jms.Session;
+import javax.jms.TextMessage;
+
+/**
+ * Classe responsável em ser a integradora com a Queue. Cabe a ela enviar e
+ * devolver a informação padrão de comunicação da queue no caso XML está sendo
+ * utilizado para troca de comunicação..
+ * 
+ * @author Luiz Fernando
+ * 
+ */
+public class ContaMedicaGateway extends QueueBase {
+
+	public ContaMedicaGateway() {
+	}
+
+	private static final String NOME_FILA = "queue/FilaFIAP";
+	
+	private QueueConnection queueConnection;
+	private QueueSession queueSession;
+	private TextMessage message;
+
+	public String enviarXml(String xmlIn) {
+		
+		String xmlRetorno = "";
+		
+		try {
+			
+			queueConnection = obterConexaoQueue(NOME_FILA);
+			queueSession =  queueConnection.createQueueSession(false, Session.AUTO_ACKNOWLEDGE);
+
+			QueueRequestor queueRequestor = new QueueRequestor(queueSession, queue);
+
+			queueConnection.start();
+
+			message = queueSession.createTextMessage();
+			message.setText(xmlIn);
+
+			TextMessage reply = (TextMessage) queueRequestor.request(message);
+			xmlRetorno = reply.toString();
+			
+		} catch (JMSException e) {
+		} finally {
+			fecharConexao(queueConnection);
+		}
+		
+		return xmlRetorno;
+	}
+
+}

@@ -1,0 +1,9 @@
+INDEX VERSION 1.126
+C:\ambiente-de-trabalho\workspace-artigo-web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3012570041.index
+\artigostruts2\src
+C:\ambiente-de-trabalho\workspace-artigo-web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3843841786.index
+\artigojsf12\src
+C:\ambiente-de-trabalho\workspace-artigo-web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1933487858.index
+\artigostruts13\src
+C:\ambiente-de-trabalho\workspace-artigo-web\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2483514374.index
+\StrutsExample\src\main\java

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- 
+Script para geração do WAR da aplicação Controle de Chamados.
+@author Marcos Macedo - marcos@synapsystem.com.br
+@version 1.0
+-->
+
+<project name="aula5Util-generate-jar" default="generate.jar" basedir=".">
+
+	<property file="script.properties"/>
+
+	<!-- Manifest do JAR -->
+	<property name="aplicacao" value="aula5Util" />
+	<!-- Manifest do JAR -->
+	<property name="manifest" value="../../${aplicacao}/META-INF/MANIFEST.MF" />
+	<!-- Nome do JAR -->
+	<property name="jar.name" value="aula5Util" />
+	<!-- Número da Versão JAR -->
+	<property name="jar.version" value="1.0" />
+	<!-- Diretório de geração do JAR Modulo DB -->
+	<property name="jar.dir" value="../../${aplicacao}/dist" />
+	
+	
+	
+	
+	<target name="clean">
+		<echo message="Limpando diretorios..." />
+		<delete failonerror="false" includeEmptyDirs="true">
+			<fileset dir="${jar.dir}" />
+		</delete>
+	</target>
+	
+	<target name="mk-dist">
+		<echo message="Criando diretorio dist..." />
+		<mkdir dir="${jar.dir}"/>
+	</target>
+
+	
+	<target name="generate.jar" depends="clean,mk-dist">
+		<echo message="Gerando o JAR do modulo de acesso a banco de dados..." />
+		<jar jarfile="${jar.dir}/${jar.name}-${jar.version}.jar" 
+			manifest="${manifest}"	filesonly="true">
+			<fileset dir="../../${aplicacao}/bin" >
+            	<include name="**/*.class"/>
+            </fileset>
+		</jar>
+	</target>	
+	
+</project>

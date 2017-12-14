@@ -1,0 +1,25 @@
+<ui:composition template="/WEB-INF/template.xhtml" 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://richfaces.org/sandbox/bootstrap"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j" >
+	
+	<ui:define name="importar">
+		<link href="../bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />
+		<link href="../bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+		<script src="../bootstrap/js/bootstrap.js"></script>
+	</ui:define>
+	<ui:define name="content">
+		<div class="hero-unit">
+			<h3>Reservar</h3>
+			<b:input value="#{cadastroReservas.reserva.nomeCliente}" placeholder="Nome Cliente" scale="xxlarge" required="true" id="nomeCliente" requiredMessage="Nome Cliente é Obrigatório!" /><b:label severity="important"><h:message for="nomeCliente" /></b:label><br />
+			<b:input value="#{cadastroReservas.reserva.contato}" placeholder="Contato" required="true" id="contato" requiredMessage="Contato é Obrigatório!" /><b:label severity="important"><h:message for="contato" /></b:label><br />
+			<b:input value="#{cadastroReservas.reserva.codMesa}" placeholder="Mesa" scale="small" required="true" id="mesa" requiredMessage="Mesa é Obrigatória!" /><b:label severity="important"><h:message for="mesa" /></b:label><br />
+			<b:input type="datetime-local" value="#{cadastroReservas.datReserva}" placeholder="Data Reserva" required="true" id="dataReserva" requiredMessage="Data da Reserva é Obrigatória!" /><b:label severity="important"><h:message for="dataReserva" /></b:label><br />
+			<b:commandButton value="Salvar" action="#{cadastroReservas.salvarReserva}" styleClass="btn btn-large btn-primary"  />
+		</div>
+	</ui:define>
+</ui:composition>

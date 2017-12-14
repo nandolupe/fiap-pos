@@ -1,0 +1,34 @@
+package br.com.fiap.projetojpa.concurrency;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import org.hibernate.LockMode;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import br.com.fiap.projetojpa.datatypes.Item;
+import br.com.fiap.projetojpa.util.JPAUtil;
+
+public class ItemDAOImpl {
+	
+	EntityManagerFactory entityManagerFactory = null;
+	EntityManager entityManager = null;
+	
+	public ItemDAOImpl() {
+		entityManagerFactory = Persistence.createEntityManagerFactory("ecommerce-pu");
+		entityManager = entityManagerFactory.createEntityManager();
+	}
+	
+	public void buscarItem(Item item) {
+		
+		try{
+			
+			entityManager.createQuery("from Item ");
+			
+		} catch (Exception e){
+			System.out.println("Ocorreu um erro: " + e);
+		}
+	}
+}

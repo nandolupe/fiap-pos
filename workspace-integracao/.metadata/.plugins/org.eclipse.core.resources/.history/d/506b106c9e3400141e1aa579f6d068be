@@ -1,0 +1,5 @@
+package com.fiap.contamedica.util;
+
+public class MailUtil {
+
+}

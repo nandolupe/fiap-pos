@@ -1,0 +1,16 @@
+package com.fiap.contamedica.gateway;
+
+/**
+ * Classe abstrata responsável em prover a comunicação com a queue,
+ * ou seja, criar e fechar a conexão.
+ * 
+ * @author Luiz Fernando 
+ *
+ */
+public abstract class QueueBase {
+
+	public QueueBase() {
+		
+	}
+
+}

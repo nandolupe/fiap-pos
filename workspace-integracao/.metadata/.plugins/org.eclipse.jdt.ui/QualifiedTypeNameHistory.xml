@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.Float"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="javax.xml.bind.Marshaller"/>
+<fullyQualifiedTypeName name="javax.xml.bind.JAXBContext"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlRootElement"/>
+<fullyQualifiedTypeName name="java.io.StringWriter"/>
+<fullyQualifiedTypeName name="java.util.logging.Logger"/>
+<fullyQualifiedTypeName name="javax.jms.QueueConnection"/>
+<fullyQualifiedTypeName name="com.fiap.contamedica.gateway.QueueBase"/>
+<fullyQualifiedTypeName name="com.fiap.contamedica.gateway.ContaMedicaGateway"/>
+<fullyQualifiedTypeName name="javax.xml.bind.Unmarshaller"/>
+<fullyQualifiedTypeName name="javax.xml.transform.stream.StreamSource"/>
+<fullyQualifiedTypeName name="java.io.StringReader"/>
+<fullyQualifiedTypeName name="javax.xml.bind.JAXBElement"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlElement"/>
+<fullyQualifiedTypeName name="com.fiap.contamedica.business.ContaMedicaBusinessImpl"/>
+<fullyQualifiedTypeName name="com.fiap.contamedica.main.StartJob"/>
+<fullyQualifiedTypeName name="com.fiap.contamedica.gateway.AnaliseMedicaConsumerGateway"/>
+<fullyQualifiedTypeName name="com.fiap.contamedica.gateway.ContaMedicaProdutorGateway"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="com.fiap.contamedica.business.AnaliseContaBusiness"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.lang.Class"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+<fullyQualifiedTypeName name="com.fiap.contamedica.entity.AnaliseConta"/>
+<fullyQualifiedTypeName name="com.fiap.contamedica.util.PropertiesUtil"/>
+<fullyQualifiedTypeName name="com.fiap.contamedica.entity.ContaMedica"/>
+<fullyQualifiedTypeName name="com.fiap.contamedica.util.MailUtil"/>
+<fullyQualifiedTypeName name="java.math.BigDecimal"/>
+<fullyQualifiedTypeName name="java.text.DecimalFormat"/>
+</qualifiedTypeNameHistroy>

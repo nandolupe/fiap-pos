@@ -1,0 +1,18 @@
+package com.fiap.artigostruts13.form;
+
+import org.apache.struts.action.ActionForm;
+
+public class ClienteForm extends ActionForm {
+
+	private static final long serialVersionUID = 1L;
+	
+	String message;
+	 
+	public String getMessage() {
+		return message;
+	}
+ 
+	public void setMessage(String message) {
+		this.message = message;
+	}
+}

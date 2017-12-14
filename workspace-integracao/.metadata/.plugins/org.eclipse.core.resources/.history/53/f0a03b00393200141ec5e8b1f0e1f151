@@ -1,0 +1,18 @@
+package com.fiap.contamedica.main;
+
+import com.fiap.contamedica.gateway.AnaliseMedicaConsumerGateway;
+
+public class StartJob {
+
+	public StartJob() {}
+	
+	private AnaliseMedicaConsumerGateway consumerGateway = new AnaliseMedicaConsumerGateway();
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	private void start() {
+
+	}
+}

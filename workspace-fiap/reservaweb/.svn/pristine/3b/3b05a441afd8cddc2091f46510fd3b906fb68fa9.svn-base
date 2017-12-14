@@ -1,0 +1,27 @@
+package br.com.fiap.reservaweb.persistence;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import br.com.fiap.reservaweb.entity.Reserva;
+
+public class ReservaDao {
+	Session session = null;
+	Transaction transaction = null;
+
+	public String salvar(Reserva reserva){
+		try{
+			session = HibernateUtil.getSessionFactory().getCurrentSession();
+			transaction = session.beginTransaction();
+			session.save(reserva);
+			transaction.commit();
+			return "Reserva salva";
+		}catch(Exception e){
+			return e.getMessage();
+		}
+	}
+
+	public Reserva buscar(int id){
+		return (Reserva) session.load(Reserva.class, id);
+	}
+}

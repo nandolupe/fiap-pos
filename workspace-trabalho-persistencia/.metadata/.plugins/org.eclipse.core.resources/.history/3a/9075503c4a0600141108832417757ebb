@@ -1,0 +1,16 @@
+package br.com.fiap.projetojpa.main;
+
+import br.com.fiap.projetojpa.cache.TipoItemDAOImpl;
+import br.com.fiap.projetojpa.concurrency.ItemDAOImpl;
+import br.com.fiap.projetojpa.datatypes.Item;
+import br.com.fiap.projetojpa.datatypes.TipoItem;
+
+public class TesteConcorrencia {
+	public static void main(String[] args) {		
+		ItemDAOImpl itemDAOImpl = new ItemDAOImpl();
+		
+		
+		itemDAOImpl.buscarItem(new Item());
+		
+	}
+}

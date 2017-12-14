@@ -1,0 +1,44 @@
+package br.com.fiap.java.io;
+
+/**
+ * Import do arquivos externos utilizados na classe
+ */
+import java.io.File;
+import java.util.logging.Level;
+
+import br.com.fiap.java.exception.NegocioException;
+
+/**
+ *
+ */
+public class MensagemArquivo extends ArquivoGenerico {
+
+	private static final String CAMINHO_ARQUIVO_MENSAGEM = "C:\\mensagem-codificada.txt";
+	
+	
+	public static MensagemArquivo singleton;
+
+	private MensagemArquivo() {
+		super();
+	}
+
+	public static MensagemArquivo getInstance() {
+		if (singleton == null) {
+			singleton = new MensagemArquivo();
+		}
+		return singleton;
+	}
+
+	/**
+	 * Método escreverAtividades
+	 * @param linha texto para persistir no arquivo
+	 * @throws NegocioException 
+	 */
+	public void escreverAtividades(String linha) throws NegocioException {
+		logger.setLevel(Level.ALL);
+		logger.log(Level.INFO, "Método escrever mensagem");
+		logger.log(Level.INFO, "Criando o file mensagem");
+		File file = new File(CAMINHO_ARQUIVO_MENSAGEM);
+		salvarArquivo(file, linha);
+	}
+}

@@ -1,0 +1,9 @@
+CREATE TABLE funcionario ( 
+    COD_FUNCIONARIO	int(11) NULL,
+    NOME           	varchar(50) NULL,
+    SOBRENOME      	varchar(100) NULL,
+    DATA_NASCIMENTO	date NULL,
+    SALARIO        	decimal(10,0) NULL,
+    CARGO          	varchar(50) NULL 
+    )
+GO

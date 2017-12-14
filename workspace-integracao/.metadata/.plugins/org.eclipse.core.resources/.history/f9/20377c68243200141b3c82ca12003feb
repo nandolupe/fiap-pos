@@ -1,0 +1,9 @@
+package com.fiap.contamedica.gateway;
+
+public abstract class QueueBase {
+
+	public QueueBase() {
+		
+	}
+
+}

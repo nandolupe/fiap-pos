@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Configurar o dialeto é dizer qual é a forma de comunicação do Hibernate e do banco de dados. -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		
+		<!-- Deve indicar que é o Driver Utilizado, cada SGDB tem o seu específico. -->
+		<property name="javax.persistence.jdbc.driver">com.mysql.jdbc.Driver</property>
+		<property name="hbm2ddl.auto" value="create" />
+		<!-- URL de conexão -->
+		<property name="javax.persistence.jdbc.url">jdbc:mysql://localhost:3306/ecommerce</property>
+		
+		<!-- Username do banco de dados. -->
+		<property name="javax.persistence.jdbc.user">root</property>
+		
+		<!-- Senha do banco de dados. -->
+		<property name="javax.persistence.jdbc.password">admin</property>
+		
+		<!-- A opção show_sql é para em tempo de execução o Hibernate realizar o log do SQL -->
+		<property name="hibernate.show_sql">true</property>
+		
+		<!-- A opção de current session, informamos que queremos como thread -->
+		<property name="hibernate.current_session_context_class">thread</property>
+		
+		<!-- Ativar o cache do JPA -->
+		<property name="javax.persistence.sharedCache.mode" value="ENABLE_SELECTIVE"/>
+		
+		<!-- Abaixo segue o mapeamento das classes que estão anotadas para persistência. -->
+		<mapping class="br.com.fiap.projetojpa.datatypes.Cliente" />
+		<mapping class="br.com.fiap.projetojpa.datatypes.Item" />
+		<mapping class="br.com.fiap.projetojpa.datatypes.Pedido" />
+		<mapping class="br.com.fiap.projetojpa.datatypes.PedidoItem" />
+		<mapping class="br.com.fiap.projetojpa.datatypes.TipoItem" />
+	</session-factory>
+</hibernate-configuration>

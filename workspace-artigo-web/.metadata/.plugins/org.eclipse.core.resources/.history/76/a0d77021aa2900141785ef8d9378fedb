@@ -1,0 +1,28 @@
+package com.fiap.teste.bean;
+
+public class Cliente {
+
+	private Integer idCliente;
+	private String nameCliente;
+	private String sobrenome;
+	private Date dtNasc;
+
+	public Integer getIdCliente() {
+		return idCliente;
+	}
+	public void setIdCliente(Integer idCliente) {
+		this.idCliente = idCliente;
+	}
+	public String getNameCliente() {
+		return nameCliente;
+	}
+	public void setNameCliente(String nameCliente) {
+		this.nameCliente = nameCliente;
+	}
+	public String getSobrenome() {
+		return sobrenome;
+	}
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
+	}
+}

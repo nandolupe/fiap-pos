@@ -1,0 +1,85 @@
+package br.com.fiap.reservaweb.entity;
+
+import java.io.Serializable;
+import javax.persistence.*;
+import java.util.Date;
+
+@Entity
+@Table(name="reserva")
+@NamedQuery(name="Reserva.findAll", query="SELECT r FROM Reserva r")
+public class Reserva implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id @GeneratedValue
+	@Column(name="ID_RESERVA")
+	private Integer idReserva;
+
+	@Column(name="COD_MESA", length=20)
+	private String codMesa;
+
+	@Column(length=13)
+	private String contato;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name="DT_RESERVA")
+	private Date dtReserva;
+
+	@Column(name="NOME_CLIENTE", length=150)
+	private String nomeCliente;
+
+	@ManyToOne
+	@JoinColumn(name="CNPJ_CPF")
+	private Estabelecimento estabelecimento;
+
+	public Reserva() {
+	}
+
+	public Integer getIdReserva() {
+		return this.idReserva;
+	}
+
+	public void setIdReserva(Integer idReserva) {
+		this.idReserva = idReserva;
+	}
+
+	public String getCodMesa() {
+		return this.codMesa;
+	}
+
+	public void setCodMesa(String codMesa) {
+		this.codMesa = codMesa;
+	}
+
+	public String getContato() {
+		return this.contato;
+	}
+
+	public void setContato(String contato) {
+		this.contato = contato;
+	}
+
+	public Date getDtReserva() {
+		return this.dtReserva;
+	}
+
+	public void setDtReserva(Date dtReserva) {
+		this.dtReserva = dtReserva;
+	}
+
+	public String getNomeCliente() {
+		return this.nomeCliente;
+	}
+
+	public void setNomeCliente(String nomeCliente) {
+		this.nomeCliente = nomeCliente;
+	}
+
+	public Estabelecimento getEstabelecimento() {
+		return this.estabelecimento;
+	}
+
+	public void setEstabelecimento(Estabelecimento estabelecimento) {
+		this.estabelecimento = estabelecimento;
+	}
+
+}

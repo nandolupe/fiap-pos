@@ -1,0 +1,46 @@
+package br.com.fiap.projetojpa.concurrency;
+
+import javax.persistence.EntityManagerFactory;
+
+import org.hibernate.LockMode;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import br.com.fiap.projetojpa.datatypes.Item;
+import br.com.fiap.projetojpa.util.JPAUtil;
+
+public class ItemDAOImpl {
+	
+	EntityManagerFactory entityManagerFactory = null;
+	
+	public ItemDAOImpl() {
+		entityManagerFactory = Persistence.createEntityManagerFactory( "org.hibernate.tutorial.jpa" );
+	}
+	
+	private Session session = null;
+	private Transaction transaction = null;
+
+	public void buscarItem(Item item) {
+		
+		try{
+			
+			session = JPAUtil.getSessionFactory().getCurrentSession();
+			// Abre a transação, após isso várias operações poderão ser executadas
+			// e em caso de falhas a operação como inteiro é retornada ao seu estado inicial.
+			transaction = session.beginTransaction();
+			
+			JPAUtil.getSessionFactory()
+			
+			Item itemResult = (Item) session.load(Item.class, item.getIdItem());
+			itemResult.setValorItem(item.getValorItem());
+			
+			session.refresh(item, LockMode.WRITE);
+			
+			// salvamos o Pedido primeiramente.
+			session.save(item);
+			
+		} catch (Exception e){
+			System.out.println("Ocorreu um erro: " + e);
+		}
+	}
+}

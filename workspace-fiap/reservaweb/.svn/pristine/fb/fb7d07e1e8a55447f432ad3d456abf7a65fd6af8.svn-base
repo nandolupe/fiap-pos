@@ -1,0 +1,33 @@
+package br.com.fiap.reservaweb.beans;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import br.com.fiap.reservaweb.entity.Reserva;
+
+@ManagedBean(name="cadastroReservas")
+@SessionScoped
+public class CadastroReservasBean {
+    
+	public CadastroReservasBean() {
+		reserva = new Reserva();
+	}
+	
+	private Reserva reserva;
+	
+    public Reserva getReserva() {
+		return reserva;
+	}
+
+	public void setReserva(Reserva reserva) {
+		this.reserva = reserva;
+	}
+
+	public String cadastrarReservas() {
+    	return "/pages/reservas";
+	}
+    
+	public String salvarReserva() {
+		
+		return "";
+	}
+}

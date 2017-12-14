@@ -1,0 +1,63 @@
+package com.fiap.contamedica.gateway;
+
+import javax.jms.JMSException;
+import javax.jms.Queue;
+import javax.jms.QueueConnection;
+import javax.jms.QueueConnectionFactory;
+import javax.jms.QueueRequestor;
+import javax.jms.QueueSession;
+import javax.jms.Session;
+import javax.jms.TextMessage;
+import javax.naming.Context;
+import javax.naming.NamingException;
+
+/**
+ * Classe responsável em ser a integradora com a Queue. Cabe a ela enviar e
+ * devolver a informação padrão de comunicação da queue no caso XML está sendo
+ * utilizado para troca de comunicação..
+ * 
+ * @author Luiz Fernando
+ * 
+ */
+public class ContaMedicaProdutorGateway extends QueueBase {
+
+	public ContaMedicaProdutorGateway() {
+	}
+
+	private static final String NOME_FILA = "queue/FilaFIAP";
+
+	private Context jndiContext;
+	private QueueConnectionFactory queueConnectionFactory;
+	private QueueConnection queueConnection;
+	private QueueSession queueSession;
+	private Queue queue;
+	private TextMessage message;
+	
+	public String enviarXml(String xmlIn) {
+
+		String xmlRetorno = "";
+
+		try {
+			
+			jndiContext = getInitial();
+			queueConnectionFactory = (QueueConnectionFactory) jndiContext.lookup("ConnectionFactory");
+			queue = (Queue) jndiContext.lookup(NOME_FILA);
+			queueConnection = queueConnectionFactory.createQueueConnection();
+			queueSession = queueConnection.createQueueSession(false, Session.AUTO_ACKNOWLEDGE);
+			QueueRequestor queueRequestor = new QueueRequestor(queueSession, queue);
+			queueConnection.start();
+			message = queueSession.createTextMessage();
+			message.setText(xmlIn);
+			TextMessage reply = (TextMessage) queueRequestor.request(message);
+			xmlRetorno = reply.getText();
+		} catch (JMSException e) {
+		} catch (NamingException e) {
+		} catch (Exception e) {
+		} finally {
+			fecharConexao(queueConnection);
+		}
+
+		return xmlRetorno;
+	}
+
+}

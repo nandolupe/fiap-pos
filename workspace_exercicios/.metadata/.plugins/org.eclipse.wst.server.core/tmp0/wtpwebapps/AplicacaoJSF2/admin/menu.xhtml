@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<link href="css/estilos.css" rel="stylesheet" type="text/css"
+	media="screen" />
+<title>Menu</title>
+</head>
+<body>
+	<f:view>
+		<div id="formulario">
+		<ul>
+			<li><h:commandLink value="Cadastro de Usuários" action="/admin/cadUsuarios" /></li>
+			<li><h:commandLink value="Cadastro de Livros" action="/admin/cadLivros" /></li>
+			<li><h:commandLink value="Lista de Livros" action="/admin/listaLivros" /></li>
+		</ul>
+		</div>	
+	</f:view>
+</body>
+</html>

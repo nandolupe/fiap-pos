@@ -1,0 +1,74 @@
+package br.com.fiap.mensagemjava.util;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.swing.JOptionPane;
+
+public class Util {
+	
+	private static Map<byte, Integer> vogaisMap = new HashMap<>();
+	
+	static {
+		vogaisMap.put(97, 49);
+		vogaisMap.put(101, 50);
+		vogaisMap.put(105, 51);
+		vogaisMap.put(111, 52);
+		vogaisMap.put(117, 53);
+	}
+	
+	public static String criptografar(String texto) {
+		
+		int cont = 1;
+		
+		byte array[] = texto.getBytes();
+		StringBuilder sb = new StringBuilder();
+		for (int x = 0; x < array.length; x++) {
+			
+			if (vogaisMap.get(array[x]) != null) {
+				sb.append((char) vogaisMap.get(array[x]));
+			} else {
+				
+			}
+			
+			sb.append((char) (array[x] + cont));
+			cont++;
+			if (cont > 3) {
+				cont = 1;
+			}
+		}
+		return sb.toString();
+	}
+
+	public static String descriptografar(String texto) {
+		int cont = 1;
+		byte array[] = texto.getBytes();
+		StringBuilder sb = new StringBuilder();
+		for (int x = 0; x < array.length; x++) {
+			sb.append((char) (array[x] - cont));
+			cont++;
+			if (cont > 3) {
+				cont = 1;
+			}
+		}
+		return sb.toString();
+	}
+
+	public static int converteInt(String msg) {
+		int ret = 0;
+		while (ret == 0) {
+			String sTipo = JOptionPane.showInputDialog(msg);
+			try {
+				if (sTipo == null) {
+					JOptionPane.showMessageDialog(null,
+							"Cancelado pelo usuário.");
+					System.exit(0);
+				}
+				ret = Integer.parseInt(sTipo);
+			} catch (Exception e) {
+				ret = 0;
+			}
+		}
+		return ret;
+	}
+}

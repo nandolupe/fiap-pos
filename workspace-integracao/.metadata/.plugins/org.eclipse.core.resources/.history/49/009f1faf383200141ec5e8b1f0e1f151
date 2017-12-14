@@ -1,0 +1,9 @@
+package com.fiap.contamedica.main;
+
+public class StartJob {
+
+	public StartJob() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

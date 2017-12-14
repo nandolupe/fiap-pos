@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://richfaces.org/sandbox/bootstrap"
+	xmlns:rich="http://richfaces.org/rich" >
+<head>
+<ui:insert name="importar">Default content</ui:insert>
+<style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+<title>Index</title>
+</head>
+<body>
+	<f:view>
+		<h:form styleClass="form-signin" >
+			<div class="navbar navbar-inverse navbar-fixed-top">
+				<div class="navbar-inner">
+					<div class="container">
+						<a class="btn btn-navbar" data-toggle="collapse"
+							data-target=".nav-collapse"> <span class="icon-bar"></span> 
+							<span class="icon-bar"></span> <span class="icon-bar"></span>
+						</a> 
+						<a class="brand" href="#">Reservas</a>
+						<div class="nav-collapse collapse">
+							<p class="navbar-text pull-right">
+				              Olá <h:outputText value="#{loginBean.estabelecimento.nome}" />  
+				            </p>
+							<ul class="nav">
+								<li class="active"><a href="#">Home</a></li>
+								<li><h:commandLink action="#{cadastroReservas.cadastrarReservas}" value="Reservas" /></li>
+								<li><h:commandLink action="#{cadastroEstabelecimento.perfil}" value="Perfil" /></li>
+							</ul>
+						</div>
+						<!--/.nav-collapse -->
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<ui:insert name="content">Default content</ui:insert>
+				<footer>
+					<p>FIAP 2014</p>
+				</footer>
+			</div>
+		</h:form>
+	</f:view>
+</body>
+</html>

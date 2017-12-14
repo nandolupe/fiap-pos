@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<report>
+	<data>
+
+		<file>
+		
+			<caminhoLogo>imagens\\logofiap.gif</caminhoLogo>
+			<numeroControle>23457894468309723008</numeroControle>
+			<nomeCurso>Desenvolvimento de Soluções Corporativas Java</nomeCurso>
+			<nomeDisciplina>Frameworks Utilitários</nomeDisciplina>
+			<resumoDisciplina>Nesta disciplina serão apresentados os frameworks utilitários mais difundidos no mercado.</resumoDisciplina>
+			<dataGeracao>01/03/2012 11:11</dataGeracao>
+							
+			<alunos>
+				<aluno>
+					<matricula>0911</matricula>
+					<nome>Albert da Costa Xavier</nome>
+					<funcao>Arquiteto Java</funcao>
+					<nomeEmpresa>Porto Seguro Seguros</nomeEmpresa>
+				</aluno>
+				<aluno>
+					<matricula>1022</matricula>
+					<nome>Eduardo Dias</nome>
+					<funcao>Desenvolvedor Java</funcao>
+					<nomeEmpresa>Banco XXX</nomeEmpresa>
+				</aluno>
+				<aluno>
+					<matricula>1023</matricula>
+					<nome>Marcos Gonçalves</nome>
+					<funcao>Desenvolvedor Dot Net</funcao>
+					<nomeEmpresa>Empresa YYY</nomeEmpresa>
+				</aluno>
+
+			</alunos>
+
+		</file>
+
+	</data>
+
+</report>

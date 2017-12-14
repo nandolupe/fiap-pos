@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- 
+Script para geração do WAR da aplicação Controle de Chamados.
+@author Marcos Macedo - marcos@synapsystem.com.br
+@version 1.0
+-->
+
+<project name="controleChamados-deploy" default="generate.moduloweb.war" basedir=".">
+
+	<property file="script.properties"/>
+
+	<!-- Manifest do JAR -->
+	<property name="manifest" value="../../${aplicacaoBD}/META-INF/MANIFEST.MF" />
+	<!-- Número da Versão JAR -->
+	<property name="jar.version" value="1.0" />
+	<!-- Diretório de geração do JAR Modulo DB -->
+	<property name="jar.dir" value="bin" />
+	<!-- Diretório onde deve ser copiado o JAR -->
+	<property name="dist.jar.dir" value="../WebContent/WEB-INF/lib" />
+	
+	
+	<!-- Nome do pacote WAR da aplicação web-->
+	<property name="war.name" value="chamadoWeb.war" />
+	<!-- Diretório onde deve ser distribuido o WAR -->
+	<property name="war.dir" value="bin" />
+	<!-- Diretório onde deve ser distribuido o WAR -->
+	<!-- <property name="dist.war.dir" value="c:\\opensource\\jboss6\\server\\default\\deploy" />-->
+	<!-- <property name="dist.war.dir" value="C:\___jboss\jboss-6.1.0.Final\server\default\deploy" />-->
+	<property name="dist.war.dir" value="E:\jboss-6.1.0.Final\server\default\deploy" />
+	<!-- Diretório base da aplicação web -->
+	<property name="war.files.view" value="../WebContent" />	
+
+	
+	<target name="clean">
+		<echo message="Limpando diretorios..." />
+		<delete failonerror="false" includeEmptyDirs="true">
+			<fileset dir="${jar.dir}" />
+		</delete>
+	</target>
+	
+	
+  	<target name="generate.moduloBD.jar" depends="clean">
+		<mkdir dir="${jar.dir}" />
+		<antcall target="chamadoDB.jar"/>
+  		<antcall target="copyChamadoDB.jar"/>
+	</target>
+	
+	<target name="generate.moduloweb.war" depends="generate.moduloBD.jar">
+		<antcall target="chamadoweb.war"/>
+		<antcall target="copyChamadoWeb.war"/>
+	</target>
+
+	<target name="chamadoDB.jar">
+		<echo message="Gerando o JAR do modulo de acesso a banco de dados..." />
+		<jar jarfile="${jar.dir}/${jar.name}-${jar.version}.jar" 
+			manifest="${manifest}"	filesonly="true">
+			<fileset dir="../../${aplicacaoBD}/bin" >
+            	<include name="**/*.class"/>
+            </fileset>
+		</jar>
+	</target>
+	
+	<target name="chamadoweb.war">
+		<echo message="Gerando o pacote de distribuicao WAR (chamadoWeb.war)..." />
+		<war destfile="${war.dir}/${war.name}" webxml="../WebContent/WEB-INF/web.xml">
+            <fileset dir="${war.files.view}">
+                <include name="**/*.jsp"/>
+                <include name="**/*.htm"/>
+            	<include name="**/*.xml"/>
+            </fileset>
+            <lib dir="../WebContent/WEB-INF/lib" />
+            <classes dir="../build/classes"/>
+        </war>
+    </target>
+	
+	<target name="copyChamadoDB.jar">
+		<echo message="Copiando JAR do modulo de acesso a banco de dados..." />
+		<copy file="bin/${jar.name}-${jar.version}.jar" todir="${dist.jar.dir}"/>
+	</target>
+	
+	<target name="copyChamadoWeb.war">
+		<echo message="Copiando WAR do módulo web..." />
+		<copy file="bin/${war.name}" todir="${dist.war.dir}"/>
+	</target>
+	
+</project>

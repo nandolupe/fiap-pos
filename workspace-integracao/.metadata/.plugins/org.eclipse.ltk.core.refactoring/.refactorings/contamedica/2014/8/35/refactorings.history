@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.fiap.contamedica.entity.ContaMedicaEntity&apos; to &apos;ContaMedica&apos;&#x0D;&#x0A;- Original project: &apos;contamedica&apos;&#x0D;&#x0A;- Original element: &apos;com.fiap.contamedica.entity.ContaMedicaEntity&apos;&#x0D;&#x0A;- Renamed element: &apos;com.fiap.contamedica.entity.ContaMedica&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ContaMedicaEntity&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.fiap.contamedica.entity{ContaMedicaEntity.java[ContaMedicaEntity" matchStrategy="1" name="ContaMedica" qualified="false" references="true" similarDeclarations="false" stamp="1409363424577" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!-- 
+	Build para realizar a análise de código Java.
+	@author Marcos Macedo - 
+	@version 1.0
+-->
+
+<project name="controleChamados-Checkstyle" default="checkstyle" basedir=".">
+
+	<!-- Diretório base do script -->
+	<property name="base" value=".." />
+
+	<!-- Nome da aplicação. -->
+	<property name="application" value="." />
+
+	<!-- Caminho para o JAR do Checkstyle -->
+	<property name="checkstyle.jar" value="lib/checkstyle-all-3.5.jar" />
+  
+	<!-- Caminho para as regras a serem analisadas. Está sendo utilizado o padrão da SUN -->
+	<property name="checkstyle.checks" value="config/fiap_checks.xml" />
+
+	<!-- XSL para transformação do relatório -->
+	<property name="checkstyle.xsl" value="config/fiap_frames.xsl" />
+
+	<!-- Diretório que armazenará o relatório do checkstyle -->
+	<property name="checkstyle.report.dir" value="report" />
+	<property name="checkstyle.report.name" value="${application}_report.html" />
+
+	<!-- Diretório temporário -->
+	<property name="checkstyle.tmp" value="tmp/" />
+
+	<!-- Indica o caminho para o arquivo de propriedades do Checkstyle -->
+	<taskdef resource="checkstyletask.properties" classpath="${checkstyle.jar}" />
+
+	<!-- Analisa todo o código e gera um relatório com as violações -->
+	<target name="checkstyle" description="Analisa todo o código e gera um relatório com as violações.">
+		<echo message="-Gerando relatório de violações do código fonte Java ..." />
+
+		<antcall target="jar" />
+
+		<!-- Análise do código fonte -->
+		<checkstyle config="${checkstyle.checks}" failureProperty="checkstyle.failure" failOnViolation="false" classpathref="checkstyle.classpath">
+			<formatter type="xml" tofile="checkstyle_report.xml" />
+			<fileset dir="../../${application}" includes="**/*.java" />
+		</checkstyle>
+
+		<!-- Apaga os relatórios antigos e cria um novo diretório report -->
+		<delete failonerror="false">
+			<fileset dir="${checkstyle.report.dir}" includes="**/*.*"/>
+		</delete>
+		
+		<mkdir dir="${checkstyle.report.dir}" />
+
+		<!-- Realiza transformação do XML de violações para o relatório em HTML -->
+		<style in="checkstyle_report.xml" out="${checkstyle.report.dir}/${checkstyle.report.name}" style="${checkstyle.xsl}" />
+
+		<!-- Apaga o XML de violações gerado pelo Checkstyle -->
+		<delete file="checkstyle_report.xml" />
+	</target>
+
+	<!-- Cria um JAR temporário com arquivos .class da aplicação -->
+	<target name="jar">
+		<!-- Apaga e cria o diretório temporário -->
+		<delete failonerror="false">
+			<fileset dir="${checkstyle.tmp}" includes="**/*.*"/>
+		</delete>
+		<mkdir dir="${checkstyle.tmp}" />
+
+		<jar jarfile="${checkstyle.tmp}tmp.jar" filesonly="true">
+			<fileset dir="../../${application}" includes="**/*.class" />
+		</jar>
+	</target>
+
+	<!-- Indica o JAR com as classes compiladas do projeto -->
+	<path id="checkstyle.classpath">
+		<fileset dir="${checkstyle.tmp}">
+			<include name="tmp.jar" />
+		</fileset>
+	</path>
+</project>

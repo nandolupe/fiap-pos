@@ -1,0 +1,42 @@
+package br.com.fiap.java.view;
+
+import javax.swing.JOptionPane;
+
+import br.com.fiap.java.util.Util;
+
+public class PrincipalView {
+
+	public static PrincipalView singleton;
+
+	private PrincipalView() {
+		super();
+	}
+
+	public static PrincipalView getInstance() {
+		if (singleton == null) {
+			singleton = new PrincipalView();
+		}
+		return singleton;
+	}
+
+	public void telaInicial() {
+		int valor;
+		try {
+			valor = Util.converteInt("Digite 1 para (Codificar) \n" + "Digite 2 para (Decodificar)");
+			if (valor > 2 || valor < 1) {
+				JOptionPane.showMessageDialog(null, "Digite 1 ou 2");
+				telaInicial();
+			}
+			switch (valor) {
+			case 1:
+				AtividadeView.getInstance().telaInicial();
+				break;
+			case 2:
+				System.exit(0);
+				break;
+			}
+		} catch (Exception e) {
+			telaInicial();
+		}
+	}
+}

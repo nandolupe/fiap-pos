@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+
+<h:head>
+	<title>Cadastro de Alunos</title>
+</h:head>
+
+<f:view>
+	<h:body>
+		<h:form>
+			<a4j:region>
+				<rich:panel header="Cadastro de Alunos" id="painel">
+					<br />
+					<table id="tab">
+						<tr>
+							<td>Rm:</td>
+							<td><h:inputText value="#{aluno.aluno.rm}" /></td>
+						</tr>
+						<tr>
+							<td>Nome:</td>
+							<td><h:inputText value="#{aluno.aluno.nome}" /></td>
+						</tr>
+						<tr>
+							<td>Email:</td>
+							<td><h:inputText value="#{aluno.aluno.email}" /></td>
+						</tr>
+						<tr>
+							<td>Data Nascimento:</td>
+							<td><rich:calendar value="#{aluno.aluno.dataNascimento}" datePattern="dd/MM/yyyy"></rich:calendar></td>
+						</tr>
+
+						<tr>
+							<td>Curso:</td>
+							<td><h:selectOneMenu value="#{aluno.aluno.curso}">
+									<f:selectItem itemValue="" itemLabel="Selecione" noSelectionOption="true" />
+									<f:selectItems value="#{aluno.cursos}" />
+								</h:selectOneMenu></td>
+						</tr>
+					</table>
+
+					<a4j:commandButton value="Cadastrar"
+						action="#{aluno.cadastrarAluno}" render="tabela" />
+					<br />
+					<h:outputText id="resultado" value="#{aluno.mensagem}" />
+					<br />
+					<table>
+					<tr>
+						<td>Curso:</td>
+						<td>
+							<h:selectOneMenu value="#{aluno.cursoPesquisa}" valueChangeListener="#{aluno.getListaAlunosVoid}" onchange="submit()" >
+							<f:selectItem itemValue="" itemLabel="Selecione" noSelectionOption="true" />
+								<f:selectItems value="#{aluno.cursos}" />
+							</h:selectOneMenu>
+						</td>
+					</tr>
+					</table>
+					<rich:dataTable id="tabela" var="us" value="#{aluno.listaAlunos}">
+						<rich:column>
+							<f:facet name="header">RM</f:facet>
+							<h:outputText value="#{us.rm}" />
+						</rich:column>
+						<rich:column>
+							<f:facet name="header">NOME</f:facet>
+							<h:outputText value="#{us.nome}" />
+						</rich:column>
+						<rich:column>
+							<f:facet name="header">EMAIL</f:facet>
+							<h:outputText value="#{us.email}" />
+						</rich:column>
+						<rich:column>
+							<f:facet name="header">DATA NASCIMENTO</f:facet>
+							<h:outputText value="#{us.dataNascimento}">
+								<f:convertDateTime pattern="dd/MM/yyyy" />
+							</h:outputText>
+						</rich:column>
+						<rich:column>
+							<f:facet name="header">CURSO</f:facet>
+							<h:outputText value="#{us.curso}" />
+						</rich:column>
+					</rich:dataTable>
+				</rich:panel>
+			</a4j:region>
+		</h:form>
+	</h:body>
+</f:view>
+</html>

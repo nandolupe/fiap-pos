@@ -1,0 +1,26 @@
+package com.fiap.contamedica.main;
+
+import com.fiap.contamedica.gateway.AnaliseMedicaConsumerGateway;
+
+/**
+ * @author Classe responsável em dar o start no job de consumo.
+ *
+ */
+public class StartJob {
+
+	public StartJob() {}
+	
+	private AnaliseMedicaConsumerGateway consumerGateway = new AnaliseMedicaConsumerGateway();
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		final StartJob startJob = new StartJob();
+		startJob.start();
+	}
+	
+	private void start() {
+		consumerGateway.consumirXml();
+	}
+}

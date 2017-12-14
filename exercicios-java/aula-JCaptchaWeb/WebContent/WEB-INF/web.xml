@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.4">
+  <display-name>Exemplo Captcha Servlet</display-name>
+  <servlet>
+    <servlet-name>jcaptcha</servlet-name>
+    <servlet-class>br.com.fiap.imagem.SimpleImageCaptchaServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>validar</servlet-name>
+    <servlet-class>br.com.fiap.Teste</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>jcaptcha</servlet-name>
+    <url-pattern>/jcaptcha.jpg</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>validar</servlet-name>
+    <url-pattern>/validar</url-pattern>
+  </servlet-mapping>
+</web-app>
