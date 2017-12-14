@@ -1,9 +1,0 @@
-1404440694187	Rename package 'br.com.fiap.projetohibernate.cache'
-1404440705947	Rename package 'br.com.fiap.projetohibernate.concurrency'
-1404440719938	Rename package 'br.com.fiap.projetohibernate.datatypes'
-1404440729791	Rename package 'br.com.fiap.projetohibernate.util'
-1404440737011	Rename package 'br.com.fiap.projetohibernate.transaction'
-1404440746834	Rename package 'br.com.fiap.projetohibernate.main'
-1404440759507	Rename type 'HibernateUtil'
-1404606256650	Copy packages
-1404618133207	Move compilation unit

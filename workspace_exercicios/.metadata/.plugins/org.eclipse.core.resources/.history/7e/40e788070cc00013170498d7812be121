@@ -1,7 +1,0 @@
-package com.exercicios.datatypes;
-
-import java.io.Serializable;
-
-public class FuncionarioTO implements Serializable {
-
-}

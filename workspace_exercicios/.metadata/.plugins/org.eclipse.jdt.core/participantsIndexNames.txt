@@ -1,3 +1,0 @@
-INDEX VERSION 1.126
-D:\workspace_exercicios\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4252809737.index
-\exerciciosweb\src

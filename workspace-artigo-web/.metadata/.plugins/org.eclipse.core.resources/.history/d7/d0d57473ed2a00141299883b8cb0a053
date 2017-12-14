@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14083759988430" configfile="/artigojsf12/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="InserirCliente" x="122" y="178" id="pf14088159579011" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" outlinks="pf14088159579022" inlinks="pf14088159579022" path="/cadastroCliente.jsp"/>
-  <links id="pf14088159579022" target="pf14088159579011" source="pf14088159579011" outcome="success">
-    <bendPoints d1Height="-36" d2Height="-36"/>
-    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
-    <bendPoints d1Width="-64" d2Width="-64"/>
-  </links>
-</pageflow:Pageflow>

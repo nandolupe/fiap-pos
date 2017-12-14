@@ -1,8 +1,0 @@
-package br.com.fiap.mensagemjava.view;
-
-public class Executavel {
-	
-	public static void main(String[] args) {
-		MensagemView.getInstance().telaInicial();
-	}
-}
